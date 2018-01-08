@@ -1,11 +1,15 @@
 <template>
 
+  <v-footer></v-footer>
 </template>
 
 <script>
-    export default {
-
+  import Footer from '@/common/footer'
+  export default {
+    components:{
+      'v-footer':Footer
     }
+  }
 </script>
 
 <style scoped>
