@@ -14,7 +14,7 @@ module.exports = {
       '/api':{
         target:'http://news-at.zhihu.com',
         changeOrigin:true,
-        pathRewirte:{
+        pathRewrite:{
           '^/api':'/api/4'
         }
 
@@ -22,7 +22,7 @@ module.exports = {
       '/api7':{
         target:'http://news-at.zhihu.com',
         changeOrigin:true,
-        pathRewirte:{
+        pathRewrite:{
           '^/api7':'/api/7'
         }
       }
