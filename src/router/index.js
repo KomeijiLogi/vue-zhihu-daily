@@ -73,7 +73,7 @@ export default new Router({
     },
     {
       path:'/editorList/:id',
-      name:'编辑列表页',
+      name:'列表页',
       component:EditorList
     }
   ]
