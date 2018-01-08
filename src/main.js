@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import mintui from 'mint-ui'   //mint-ui
 import 'mint-ui/lib/style.css'
-
+import store from '@/vuex/store.js'
+import axios from 'axios'
 
 Vue.config.productionTip = false
 Vue.use(mintui)
+Vue.prototype.$axios=axios;
 
 
 
@@ -16,6 +18,7 @@ Vue.use(mintui)
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
