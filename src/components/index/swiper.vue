@@ -2,6 +2,7 @@
     <mt-swipe :auto="4000">
         <mt-swipe-item v-for="k in topStories" :key="k.id" @click.native="toDetail(k.id)">
             <img :src="attachImgUrl(k.image)" :alt="k.title">
+            <span class="top-title">{{k.title}}</span>
         </mt-swipe-item>
     </mt-swipe>
 </template>
@@ -15,10 +16,7 @@
           }
        },
        created(){
-          this.$axios({
-             url:'api/news/latest',
-             method:'get'
-          }).then((response)=>{
+          this.$axios.get('/api/news/latest').then((response)=>{
               this.topStories=response.data.top_stories;
           }).catch((err)=>{
                console.log(err);
@@ -29,7 +27,7 @@
          toDetail(id){
             this.$router.push({
               name:'详情页',
-              query:{id:id}
+              params:{id:id}
             })
          },
          //修改图片链接
@@ -43,6 +41,30 @@
     }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+  @import "../../assets/fz";
+  @import "../../assets/icons/iconfont";
+  .mint-swipe {
+    width: 97%;
+    height:80vw;
+    top: -100px;
+    padding: 0;
+    position: absolute;
 
+    a,img {
+      display: block;
+      width: 100%;
+      height:100%;
+    }
+    .top-title{
+      z-index: 9;
+      color: whitesmoke;
+      .fz(font-size,35);
+      position: absolute;
+      bottom: 0;
+      padding: 20px 20px;
+     text-align: center;
+
+    }
+  }
 </style>
