@@ -1,7 +1,11 @@
 <template>
-   <section class="section" v-if="sectionDatas">
-   <mt-loadmore ref="loadmore" :bottom-method="loadMore" :buttom-all-loaded="allLoaded">
-     <ul class="section-list" >
+   <section class="section">
+     <ul
+       v-infinite-scoll="loadMore"
+       infinite-scroll-disabled="loading"
+       infinite-scroll-distance="40"
+       infinite-scroll-immediate-check=false
+       class="section-list">
        <li v-for="k in stories" :key="k.id" @click.stop="toDetail(k.id)">
            <div class="section-line">
              <h5 class="section-line-content">
@@ -11,39 +15,37 @@
            </div>
        </li>
      </ul>
-   </mt-loadmore>
-
    </section>
 </template>
 
 <script>
-    import {Loadmore} from 'mint-ui'
-    import {Indicator } from 'mint-ui'
+    import {InfiniteScroll } from 'mint-ui'
+    import { Indicator } from 'mint-ui'
+
     export default {
-       props:['sectionDatas'],
        data(){
          return{
-           allLoaded:false,
-           stories:[],
            date:Date,
            dateStr:'',          //日期字符串
-           loading:false
+           loading:false,
          }
        },
       created(){
           //判断是否是第一次进入index
          if(this.$store.state.isFirstLoad){
-           //加载最近6条数据
+           //加载最近N条数据
            this.fetchDatas();
            this.$store.dispatch('changeLoadState');
          }
          this.initDate();
 
           this.$on('refresh',()=>{
+            //清空数据
             refreshData();
           });
       },
        methods:{
+
          //修改图片链接
          attachImgUrl(url){
            if(url!=undefined){
@@ -53,10 +55,18 @@
          },
          //加载更多
          loadMore(){
-              //请求数据
 
-             //this.allLoaded=true; //数据全部加载完
-             this.$refs.loadmore.onBottomLoaded(); //重新定位
+              this.loading=true;
+
+              Indicator.open({
+                 text:'加载中...',
+                 spinnerType:'double-bounce'
+              });
+              //请求数据
+              this.$nextTick(()=>{
+                this.fetchMoreDatas();
+              });
+              this.loading=false;
          },
          //跳转到详情页
          toDetail(id){
@@ -64,15 +74,15 @@
             this.$store.dispatch('changeNewsType',0);
             this.$router.push({name:'详情页',params:{id:id}});
          },
-         //请求最近6条数据
+         //请求最近N条数据
          fetchDatas(){
            this.$axios.get('/api/news/latest')
              .then((res)=>{
-                this.stories=res.data.stories;
+                let stories=res.data.stories;
                 let ids=res.data.stories.map((story)=>{story.id});
 
                 this.$store.dispatch('addNews',{
-                  stories:this.stories,
+                  stories:stories,
                   ids:ids
                 })
              })
@@ -82,25 +92,57 @@
          },
          //根据日期请求过往数据 >=20130520
          fetchMoreDatas(){
+             this.$axios.get('/api/4/news/before/'+this.dateStr)
+               .then((res)=>{
+                 //合并数据
+                 let stories=res.data.stories;
+                 let ids=res.data.stories.map((story)=>{story.id});
 
+                 this.$store.dispatch('addNews',{
+                   stories:stories,
+                   ids:ids
+                 });
+                 //关闭Indicator
+                 Indicator.close();
+               })
+               .catch((err)=>{
+                  console.log(err);
+               });
          },
          //初始化时间
          initDate(){
-
+            this.date=new Date();
+            this.changeDate2String(this.date);
          },
          //日期前推
-         descDate(){
-
+         decrDate(){
+            this.date.setDate(this.date.getDate()-1);
+            this.changeDate2String(this.date);
          },
          //刷新数据
          refreshData(){
             this.$store.dispatch('refreshNews');
+            //重新获取数据,nextTick更新内容后立即获取更新后的Dom
+            this.$nextTick(()=>{
+              this.fetchDatas();
+            });
          },
          //将date转换成string
-         changeDate2String(){
-
+         changeDate2String(date){
+            let year=date.getFullYear();
+            let month=date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1;
+            let day=date.getDate()<10?'0'+date.getDate():date.getDate();
+            let dateStr=year+month+day;
+            console.log(dateStr);
+            this.dateStr=dateStr;
          }
+       },
+       computed:{
+          stories(){
+             return this.$store.state.stories;
+          }
        }
+
     }
 </script>
 

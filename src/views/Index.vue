@@ -18,11 +18,6 @@
           'v-header':Header,
           'v-swiper':Swiper,
           'v-section':Section
-        },
-        data(){
-          return{
-            datas:''
-          }
         }
 
     }
