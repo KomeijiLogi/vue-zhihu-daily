@@ -1,11 +1,11 @@
 <template>
     <div class="detail">
-       <div v-if="this.$store.state.newsType===0" class="detail-wrapper">
+       <div  class="detail-wrapper">
            <img  v-lazy="attachImgUrl(this.datas.image)"/>
            <span class="detail-source">图片来源:{{datas.image_source}}</span>
            <span class="detail-title">{{datas.title}}</span>
        </div>
-      <div class="detail-body" v-html="this.datas.body" v-bind:style="cssStyle">
+      <div class="detail-body" v-html="this.datas.body">
       </div>
     </div>
 </template>
@@ -54,7 +54,7 @@
 <style lang="less" scoped>
   @import "../../assets/fz";
   @import "../../assets/icons/iconfont";
-  //@import "../../assets/news_qa";
+  @import "../../assets/news_qa";
 .detail{
   margin-top: -160px;
   display: flex;
@@ -74,18 +74,28 @@
       position: relative;
       //color: whitesmoke;
       .fz(font-size,36);
+      font-weight: 700;
+      top:-75px;
     }
     .detail-source{
        .fz(font-size,24);
+       z-index: 99;
+       position: absolute;
+       top:200px;
+       right: 10px;
+       color: white;
     }
 
   }
   .detail-body{
     text-align: left;
     padding: 3vw;
-    .content-img:after{
-      width: 100%;
-    }
+    position: relative;
+    top:-75px;
+   figure{
+
+   }
+
   }
 
 }
