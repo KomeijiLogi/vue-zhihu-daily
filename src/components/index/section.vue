@@ -11,7 +11,7 @@
              <h5 class="section-line-content">
                {{k.title}}
              </h5>
-             <img :src="attachImgUrl((k.images)[0])"/>
+             <img v-lazy="attachImgUrl((k.images)[0])"/>
            </div>
        </li>
      </ul>
@@ -149,6 +149,7 @@
 <style lang="less" scoped>
 @import "../../assets/fz";
 @import "../../assets/icons/iconfont";
+
 .section{
   margin-top:60vw ;
   margin-bottom: 20vw;
