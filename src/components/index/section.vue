@@ -6,7 +6,7 @@
            infinite-scroll-disabled="loading"
            infinite-scroll-distance="10"
        >
-         <li v-for="k in stories" :key="k.id" @click.stop="toDetail(k.id)">
+         <li v-for="k in stories"  @click.stop="toDetail(k.id)">
            <div class="section-line">
              <h5 class="section-line-content">
                {{k.title}}
@@ -138,7 +138,7 @@
          },
          //将date转换成string
          changeDate2String(date){
-            
+
             let year=date.getFullYear();
             let month=date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1;
             let day=date.getDate()<10?'0'+date.getDate():date.getDate();
