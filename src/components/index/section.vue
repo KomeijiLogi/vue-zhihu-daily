@@ -1,25 +1,27 @@
 <template>
    <section class="section">
-     <ul
-       v-infinite-scoll="loadMore"
-       infinite-scroll-disabled="loading"
-       infinite-scroll-distance="40"
-       infinite-scroll-immediate-check=false
-       class="section-list">
-       <li v-for="k in stories" :key="k.id" @click.stop="toDetail(k.id)">
+
+       <ul class="section-list"
+           v-infinite-scroll="loadMore"
+           infinite-scroll-disabled="loading"
+           infinite-scroll-distance="10"
+       >
+         <li v-for="k in stories" :key="k.id" @click.stop="toDetail(k.id)">
            <div class="section-line">
              <h5 class="section-line-content">
                {{k.title}}
              </h5>
              <img v-lazy="attachImgUrl((k.images)[0])"/>
            </div>
-       </li>
-     </ul>
+         </li>
+       </ul>
+
+
    </section>
 </template>
 
 <script>
-    import {InfiniteScroll } from 'mint-ui'
+
     import { Indicator } from 'mint-ui'
 
     export default {
@@ -28,6 +30,8 @@
            date:Date,
            dateStr:'',          //日期字符串
            loading:false,
+           allLoaded:false
+
          }
        },
       created(){
@@ -62,6 +66,8 @@
                  text:'加载中...',
                  spinnerType:'double-bounce'
               });
+
+
               //请求数据
               this.$nextTick(()=>{
                 this.fetchMoreDatas();
@@ -92,7 +98,8 @@
          },
          //根据日期请求过往数据 >=20130520
          fetchMoreDatas(){
-             this.$axios.get('/api/4/news/before/'+this.dateStr)
+
+             this.$axios.get('/api/news/before/'+this.dateStr)
                .then((res)=>{
                  //合并数据
                  let stories=res.data.stories;
@@ -104,6 +111,7 @@
                  });
                  //关闭Indicator
                  Indicator.close();
+                 this.decrDate();
                })
                .catch((err)=>{
                   console.log(err);
@@ -116,6 +124,7 @@
          },
          //日期前推
          decrDate(){
+
             this.date.setDate(this.date.getDate()-1);
             this.changeDate2String(this.date);
          },
@@ -129,11 +138,12 @@
          },
          //将date转换成string
          changeDate2String(date){
+            
             let year=date.getFullYear();
             let month=date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1;
             let day=date.getDate()<10?'0'+date.getDate():date.getDate();
             let dateStr=year+month+day;
-            console.log(dateStr);
+            //console.log(dateStr);
             this.dateStr=dateStr;
          }
        },
