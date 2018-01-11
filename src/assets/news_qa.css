@@ -71,7 +71,7 @@ pre {
   white-space: pre-wrap;
 }
 q {
-  quotes: \201C\201D\2018\2019;
+  /*quotes: \201C\201D\2018\2019;*/
 }
 small {
   font-size: 80%;
@@ -213,8 +213,8 @@ ol {
   font-size: 17px;
   margin: 10px 0 20px;
 }
-.content img {
 
+.content img {
   max-width: 100%;
   display: block;
   margin: 30px auto;
@@ -630,38 +630,38 @@ dfn,
 .answer h5 {
   font-size: 19px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio2), only screen and (min-device-pixel-ratio2) {
-  .icon-arrow-right {
-    background-image: url(http://static.daily.zhihu.com/img/share-icons@2x.png);
-    -webkit-background-size: 82px 55px;
-    background-size: 82px 55px;
-  }
-  .icon-vote,
-  .icon-voted {
-    background-image: url(http://static.daily.zhihu.com/img/app/Comment_Vote@2x.png) !important;
-    background-size: 11px 12px;
-  }
-  .icon-voted {
-    background-image: url(http://static.daily.zhihu.com/img/app/Comment_Voted@2x.png) !important;
-  }
-  .night .icon-vote {
-    background-image: url(http://static.daily.zhihu.com/img/app/Dark_Comment_Vote@2x.png) !important;
-  }
-  .from-column {
-    background-image: url(http://static.daily.zhihu.com/img/News_Column_Entrance@2x.png) !important;
-    background-size: 280px 30px;
-  }
-  .from-column:active {
-    background-image: url(http://static.daily.zhihu.com/img/News_Column_Entrance_Highlight@2x.png) !important;
-  }
-  .night .from-column {
-    color: #2b82ac;
-    background-image: url(http://static.daily.zhihu.com/img/Dark_News_Column_Entrance@2x.png) !important;
-  }
-  .night .from-column:active {
-    background-image: url(http://static.daily.zhihu.com/img/Dark_News_Column_Entrance_Highlight@2x.png) !important;
-  }
-}
+/*@media only screen and (-webkit-min-device-pixel-ratio2), only screen and (min-device-pixel-ratio2) {*/
+  /*.icon-arrow-right {*/
+    /*background-image: url(http://static.daily.zhihu.com/img/share-icons@2x.png);*/
+    /*-webkit-background-size: 82px 55px;*/
+    /*background-size: 82px 55px;*/
+  /*}*/
+  /*.icon-vote,*/
+  /*.icon-voted {*/
+    /*background-image: url(http://static.daily.zhihu.com/img/app/Comment_Vote@2x.png) !important;*/
+    /*background-size: 11px 12px;*/
+  /*}*/
+  /*.icon-voted {*/
+    /*background-image: url(http://static.daily.zhihu.com/img/app/Comment_Voted@2x.png) !important;*/
+  /*}*/
+  /*.night .icon-vote {*/
+    /*background-image: url(http://static.daily.zhihu.com/img/app/Dark_Comment_Vote@2x.png) !important;*/
+  /*}*/
+  /*.from-column {*/
+    /*background-image: url(http://static.daily.zhihu.com/img/News_Column_Entrance@2x.png) !important;*/
+    /*background-size: 280px 30px;*/
+  /*}*/
+  /*.from-column:active {*/
+    /*background-image: url(http://static.daily.zhihu.com/img/News_Column_Entrance_Highlight@2x.png) !important;*/
+  /*}*/
+  /*.night .from-column {*/
+    /*color: #2b82ac;*/
+    /*background-image: url(http://static.daily.zhihu.com/img/Dark_News_Column_Entrance@2x.png) !important;*/
+  /*}*/
+  /*.night .from-column:active {*/
+    /*background-image: url(http://static.daily.zhihu.com/img/Dark_News_Column_Entrance_Highlight@2x.png) !important;*/
+  /*}*/
+/*}*/
 .meta .meta-item {
   width: 39%;
   overflow: hidden;
@@ -904,10 +904,10 @@ body.dudu-night,
   background-image: url(http://static.daily.zhihu.com/img/Dark_News_Column_Entrance_Highlight.png);
 }
 
-//绂佺敤澶撮儴涓嬮潰鐨勫垎闅旂嚎
-.dudu .headline {
-  border-bottom: none;
-}
+/*//绂佺敤澶撮儴涓嬮潰鐨勫垎闅旂嚎*/
+  .dudu .headline {
+    border-bottom: none;
+  }
 
 .dudu-night .origin-source,
 .dudu-night a.origin-source:link {

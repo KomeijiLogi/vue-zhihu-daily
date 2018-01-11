@@ -51,10 +51,11 @@
     }
 </script>
 
-<style lang="less" scoped>
+<style lang="less" >
+  @import "../../assets/news_qa.css";
   @import "../../assets/fz";
   @import "../../assets/icons/iconfont";
-  @import "../../assets/news_qa";
+
 .detail{
   margin-top: -160px;
   display: flex;
@@ -92,9 +93,25 @@
     padding: 3vw;
     position: relative;
     top:-75px;
-   figure{
+    max-width: 100%;
 
-   }
+    div{
+      .content-inner{
+        .question{
+           .answer{
+              .content{
+                figure{
+                  img{
+                    max-width: 100% !important;
+                    display: block;
+                    margin: 30px auto;
+                  }
+                }
+              }
+           }
+        }
+      }
+    }
 
   }
 
