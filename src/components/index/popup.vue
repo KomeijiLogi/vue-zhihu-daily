@@ -1,0 +1,105 @@
+<template>
+    <transition name="popup">
+       <div class="popup-all">
+          <header class="header">
+             <div class="header-icon">
+                <span class="iconfont icon-account"></span>
+             </div>
+             <span>{{username}}</span>
+          </header>
+          <ul class="popup-content">
+            <router-link to="/">
+            <li>
+              <i class="iconfont icon-all"></i>
+              <span>主页</span>
+            </li>
+          </router-link>
+            <router-link to="/" v-for="k in this.datas">
+              <li>
+                  <i class="iconfont icon-add"></i>
+                  <span>{{k.name}}</span>
+
+              </li>
+            </router-link>
+          </ul>
+       </div>
+    </transition>
+</template>
+
+<script>
+    export default {
+       data(){
+          return{
+             username:'请登录',
+             datas:''    //用于接受请求的栏目列表数据
+          }
+
+       },
+       created(){
+          this.$axios.get('/api/themes')
+            .then((res)=>{
+                this.datas=res.data.others;
+            })
+            .catch((err)=>{
+               console.log(err);
+            })
+       }
+
+    }
+</script>
+
+<style lang="less" scoped>
+  @import "../../assets/fz";
+  @import "../../assets/icons/iconfont";
+  .popup-all{
+     width: 80vw;
+     height: 100vh;
+     margin-top: 0;
+
+     .header{
+       background-color: #00a2ed;
+       color: whitesmoke;
+       display: flex;
+       flex-direction: row;
+       padding: 5vw;
+       -webkit-box-align: center;
+       .header-icon{
+         border: .4vw solid #ffffff;
+         background-color: #00a2ed;
+         margin-left: 4vw;
+         -webkit-box-sizing: border-box;
+         box-sizing: border-box;
+         width: 7vw;
+         height: 7vw;
+         line-height: 6vw;
+         text-align: center;
+         border-radius: 50%;
+         span{
+           .fz(font-size,26);
+
+           &::before{
+             color: #ffffff;
+
+           }
+
+         }
+       }
+     }
+    .popup-content{
+       list-style-type: none;
+       text-align: left;
+
+          a{
+             text-decoration: none;
+             color: black;
+
+
+            li {
+              padding: 2vw;
+              line-height: 4vw;
+            }
+          }
+
+    }
+  }
+</style>

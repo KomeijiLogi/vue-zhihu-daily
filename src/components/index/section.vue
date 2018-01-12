@@ -124,7 +124,7 @@
          },
          //日期前推
          decrDate(){
-
+            //console.log((this.date).toLocaleString());
             this.date.setDate(this.date.getDate()-1);
             this.changeDate2String(this.date);
          },
@@ -138,12 +138,13 @@
          },
          //将date转换成string
          changeDate2String(date){
-
+            //console.log(date.toLocaleString());
             let year=date.getFullYear();
             let month=date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1;
             let day=date.getDate()<10?'0'+date.getDate():date.getDate();
-            let dateStr=year+month+day;
-            //console.log(dateStr);
+            //强转成str型，防止当成数字运算
+            let dateStr=String(year)+String(month)+String(day);
+            //console.log('year:'+year+'month:'+month+'day:'+day);
             this.dateStr=dateStr;
          }
        },
