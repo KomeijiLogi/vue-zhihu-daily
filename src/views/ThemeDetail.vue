@@ -5,13 +5,13 @@
              {{datas.name}}
           </h2>
       </v-header>
-       <img :src="attachImgUrl(datas.background)" class="theme-bg"/>
-       <span>{{datas.description}}</span>
+       <img :src="attachImgUrl(datas.background)" class="theme-bg" />
+       <span class="theme-title">{{datas.description}}</span>
        <ul class="theme-list">
          <router-link :to="{name:'详情页',params:{id:k.id}}" v-for="k in datas.stories" >
            <li class="theme-li">
              <span>{{k.title}}</span>
-             <!--<img :src="(k.images)" />-->
+             <img v-lazy="attachImgUrl(k.images)" />
            </li>
          </router-link>
        </ul>
@@ -47,7 +47,7 @@
         attachImgUrl(url){
           if(url!=undefined){
             //将图片链接替换，直接访问知乎图片会返回403，这是对应知乎防盗链的操作
-            return url.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p');
+            return String(url).replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p');
           }
         },
       }
@@ -63,12 +63,15 @@
     .header-theme{
        background-color: #00a2ed;
        color: white;
-
-
     }
     .theme-bg{
       height: 60vw;
       padding: 1vw;
+
+    }
+    .theme-title{
+       font-weight: 800;
+       .fz(font-size,40);
 
     }
     .theme-list{
@@ -80,10 +83,22 @@
          flex-direction: row;
          padding:2vw;
          line-height: 6vw;
-         border: #a7a7a7 1px solid;
+         border: #acacac 1px solid;
          border-radius: 2.5vw;
          margin: 3vw;
          color: black;
+         justify-content: flex-end;
+         text-decoration: none;
+         span{
+            .fz(font-size,32);
+            font-weight: 700;
+            color:gray;
+         }
+         img{
+            width: 20vw;
+            height: 20vw;
+         }
+
        }
     }
   }
