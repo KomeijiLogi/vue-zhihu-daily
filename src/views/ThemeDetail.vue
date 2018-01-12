@@ -7,6 +7,15 @@
       </v-header>
        <img :src="attachImgUrl(datas.background)" class="theme-bg" />
        <span class="theme-title">{{datas.description}}</span>
+       <div class="theme-editor">
+          <router-link to="/">
+            <span>主编</span>
+            <div v-for="n in datas.editors">
+              <img v-lazy="attachImgUrl(n.avatar)"/>
+            </div>
+          </router-link>
+
+       </div>
        <ul class="theme-list">
          <router-link :to="{name:'详情页',params:{id:k.id}}" v-for="k in datas.stories" >
            <li class="theme-li">
@@ -73,6 +82,31 @@
        font-weight: 800;
        .fz(font-size,40);
 
+    }
+    .theme-editor{
+       display: flex;
+      flex-direction: row;
+      a{
+        display: flex;
+        flex-direction: row;
+      }
+      span{
+        text-indent: 2vw;
+         margin-left:6vw;
+         margin-top: 4vw;
+         color: black;
+      }
+      div{
+
+
+         img{
+            border-radius: 50%;
+            width: 5vw;
+            height: 5vw;
+            margin-left: 2vw;
+           margin-top: 4vw;
+         }
+      }
     }
     .theme-list{
        list-style-type: none;

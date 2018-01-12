@@ -5,7 +5,7 @@
       </router-link>
       <i class="iconfont icon-process"></i>
       <i class="iconfont icon-favorite"></i>
-      <router-link to="/message">
+      <router-link to="/">
         <i class="iconfont icon-email"></i>
       </router-link>
    </footer>
