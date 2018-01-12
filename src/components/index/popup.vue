@@ -1,11 +1,15 @@
 <template>
     <transition name="popup">
        <div class="popup-all">
+
           <header class="header">
-             <div class="header-icon">
+            <router-link to="/login">
+              <div class="header-icon">
                 <span class="iconfont icon-account"></span>
-             </div>
-             <span>{{username}}</span>
+              </div>
+              <span>{{username}}</span>
+            </router-link>
+
           </header>
           <ul class="popup-content">
             <router-link to="/">
@@ -55,7 +59,7 @@
      width: 80vw;
      height: 100vh;
      margin-top: 0;
-
+     overflow: auto;
      .header{
        background-color: #00a2ed;
        color: whitesmoke;
@@ -63,27 +67,34 @@
        flex-direction: row;
        padding: 5vw;
        -webkit-box-align: center;
-       .header-icon{
-         border: .4vw solid #ffffff;
-         background-color: #00a2ed;
-         margin-left: 4vw;
-         -webkit-box-sizing: border-box;
-         box-sizing: border-box;
-         width: 7vw;
-         height: 7vw;
-         line-height: 6vw;
-         text-align: center;
-         border-radius: 50%;
-         span{
-           .fz(font-size,26);
+       a{
+         display: flex;
+         flex-direction: row;
+         text-decoration: none;
+         color: white;
+         .header-icon{
+           border: .4vw solid #ffffff;
+           background-color: #00a2ed;
+           margin-left: 4vw;
+           -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+           width: 7vw;
+           height: 7vw;
+           line-height: 6vw;
+           text-align: center;
+           border-radius: 50%;
+           span{
+             .fz(font-size,30);
 
-           &::before{
-             color: #ffffff;
+             &::before{
+               color: #ffffff;
+
+             }
 
            }
-
          }
        }
+
      }
     .popup-content{
        list-style-type: none;
@@ -93,13 +104,18 @@
              text-decoration: none;
              color: black;
 
-
             li {
               padding: 2vw;
               line-height: 4vw;
+              span{
+                .fz(margin-left,20);
+              }
             }
           }
 
+    }
+    .icon-all::before{
+       color: #00a2ed;
     }
   }
 </style>
