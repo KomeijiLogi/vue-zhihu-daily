@@ -1,7 +1,6 @@
 <template>
     <transition name="popup">
        <div class="popup-all">
-
           <header class="header">
             <router-link to="/login">
               <div class="header-icon">

@@ -76,7 +76,9 @@
     }
     .theme-list{
        list-style-type: none;
-
+       a{
+         text-decoration: none;
+       }
        li{
          text-align: left;
          display: flex;
@@ -88,11 +90,12 @@
          margin: 3vw;
          color: black;
          justify-content: flex-end;
-         text-decoration: none;
+
          span{
-            .fz(font-size,32);
+            .fz(font-size,28);
             font-weight: 700;
             color:gray;
+            padding: 2vw;
          }
          img{
             width: 20vw;
