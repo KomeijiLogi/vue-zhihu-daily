@@ -94,7 +94,9 @@
     position: relative;
     top:-75px;
     max-width: 100%;
-
+    .img-place-holder{
+       display: none;
+    }
     div{
       .content-inner{
         .question{

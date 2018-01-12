@@ -9,7 +9,6 @@
               </div>
               <span>{{username}}</span>
             </router-link>
-
           </header>
           <ul class="popup-content">
             <router-link to="/">
@@ -18,11 +17,10 @@
               <span>主页</span>
             </li>
           </router-link>
-            <router-link to="/" v-for="k in this.datas">
+            <router-link :to="{name:'主题页',params:{id:k.id}}" v-for="k in this.datas">
               <li>
                   <i class="iconfont icon-add"></i>
                   <span>{{k.name}}</span>
-
               </li>
             </router-link>
           </ul>
