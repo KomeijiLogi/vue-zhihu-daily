@@ -51,14 +51,14 @@
                //改变登录flag
                this.$store.commit('CHANGE_LOGIN_FLAG',true);
                Toast(`登录成功，即将跳转`);
-               //延迟3秒跳转到用户页
+               //延迟2秒跳转到用户页
                setTimeout(()=>{
                    this.$router.replace(
                      {
                        path:'user'
                      }
                    )
-               },3000);
+               },2000);
 
             }else {
                Toast(`账号密码不能为空`);

@@ -3,17 +3,48 @@
       <router-link to="/">
           <i class="iconfont icon-back"></i>
       </router-link>
-      <i class="iconfont icon-process"></i>
-      <i class="iconfont icon-favorite"></i>
-      <router-link to="/">
+      <div onclick="share">
+        <i class="iconfont icon-process"></i>
+      </div>
+      <div>
+        <i class="iconfont icon-favorite"></i>
+        <mt-badge size="small" type="primary">{{favorite}}</mt-badge>
+      </div>
+      <router-link :to="{name:'评论页',params:{id:this.$route.params.id}}">
         <i class="iconfont icon-email"></i>
+        <mt-badge size="small" type="primary">{{commit}}</mt-badge>
       </router-link>
    </footer>
 </template>
 
 <script>
     export default {
+       data(){
+         return{
+            commit:0,
+           favorite:0
 
+         }
+       },
+        created(){
+           let id=this.$route.params.id;
+
+           this.$axios.get('/api/story-extra/'+id)
+             .then((res)=>{
+                this.commit=res.data.comments;
+                this.favorite=res.data.popularity;
+
+             })
+             .catch((err)=>{
+                console.log(err);
+             })
+        },
+        methods:{
+          share(){
+             //分享
+
+          }
+        }
     }
 </script>
 
@@ -35,7 +66,24 @@
        text-align: center;
        color: black;
        padding: 1vw;
-    }
 
+       span{
+         position: relative;
+         top: -3vw;
+         left:-4vw;
+       }
+    }
+    div{
+      .fz(font-size,50);
+      width: 25%;
+      text-align: center;
+      color: black;
+      padding: 1vw;
+      span{
+         position: relative;
+        top: -3vw;
+        left:-4vw;
+      }
+    }
   }
 </style>

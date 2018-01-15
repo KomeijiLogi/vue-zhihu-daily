@@ -1,12 +1,12 @@
 <template>
     <transition name="popup">
        <div class="popup-all">
-          <header class="header">
-            <router-link to="/login">
+          <header class="header" @click="togglePush">
+            <router-link to="/">
               <div class="header-icon">
                 <span class="iconfont icon-account"></span>
               </div>
-              <span>{{username}}</span>
+              <span class="header-user">{{username}}</span>
             </router-link>
           </header>
           <ul class="popup-content">
@@ -31,7 +31,7 @@
     export default {
        data(){
           return{
-             username:'请登录',
+             //username:'请登录',
              datas:''    //用于接受请求的栏目列表数据
           }
 
@@ -44,6 +44,28 @@
             .catch((err)=>{
                console.log(err);
             })
+       },
+       computed:{
+         username(){
+            if(this.$store.state.loginFlag){
+               return '已登录';
+            }else {
+               return '未登录';
+            }
+         }
+       },
+       methods:{
+         togglePush(){
+           if(this.$store.state.loginFlag){
+             this.$router.push({
+                path:'/user'
+             });
+           }else {
+             this.$router.push({
+               path:'/login'
+             });
+           }
+         }
        }
 
     }
@@ -81,7 +103,7 @@
            text-align: center;
            border-radius: 50%;
            span{
-             .fz(font-size,30);
+             .fz(font-size,26);
 
              &::before{
                color: #ffffff;
@@ -89,6 +111,10 @@
              }
 
            }
+         }
+         span{
+           .fz(font-size,30);
+           padding: 2vw;
          }
        }
 
