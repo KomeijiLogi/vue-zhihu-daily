@@ -55,5 +55,9 @@ export default {
    //修改当前主题
    [types.CHANGE_CURRENT_THEME](state,res){
       state.currentThemeId=res;
+   },
+   //修改登录状态
+   [types.CHANGE_LOGIN_FLAG](state,res){
+      state.loginFlag=res;
    }
 }

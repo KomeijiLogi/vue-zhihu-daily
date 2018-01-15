@@ -32,7 +32,7 @@
      a,i{
        .fz(font-size,50);
        width: 25%;
-       text-align: left;
+       text-align: center;
        color: black;
        padding: 1vw;
     }

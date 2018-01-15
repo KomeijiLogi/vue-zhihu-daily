@@ -31,6 +31,9 @@ export const CHANGE_NEWS_TYPE='CHANGE_NEWS_TYPE';
 //修改当前主题
 export const CHANGE_CURRENT_THEME='CHANGE_CURRENT_THEME';
 
+//修改当前登录状态
+export const CHANGE_LOGIN_FLAG='CHANGE_LOGIN_FLAG';
+
 
 
 
