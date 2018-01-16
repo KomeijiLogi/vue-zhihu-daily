@@ -8,12 +8,14 @@
 
 >技术栈
 
-##### vue2.x
-##### vuex
-##### axios
-##### less
-##### es6
-##### vue-router
+#### vue2.x
+#### vuex
+#### vue-router
+#### axios
+#### less
+#### es6
+
+##### 主要使用了vue2.x全家桶，vue路由控制跳转以及访问页面控制，用vuex管理状态，样式方面使用less来布局，用iconfont阿里图片库提供素材，用axios实现与接口通信
 
 >难点:
 ##### 1.知乎api的调用，这里参考了[cccyb的知乎日报](https://github.com/cccyb/vue-zhihu-daily)中开发环境调用接口的方法
@@ -44,12 +46,13 @@
 
 
 >说明:
-##### 算是刚开个头吧，有些东西还需要之后完善实现，现在的效果图如下
-![](https://github.com/KomeijiLogi/vzhihu-daily/tree/master/gif/zhihu1.gif) <br/>
-![](https://github.com/KomeijiLogi/vzhihu-daily/tree/master/gif/zhihu2.gif) <br/>
-![](https://github.com/KomeijiLogi/vzhihu-daily/tree/master/gif/zhihu3.gif) <br/>
+##### 算是刚开个头吧，有些东西还需要之后完善实现，现在的效果图如下:<br/>
+![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu1.gif)<br/>
+![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu1.gif)<br/>
+![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu1.gif)<br/>
 
-
+>项目结构:
+##### (待补充)
 
 
 
