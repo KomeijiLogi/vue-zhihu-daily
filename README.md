@@ -44,9 +44,12 @@
 #####  2.知乎Api的开发文档参考的是izzyleung对于知乎api的分析，感谢izzyleung提供了api详情以让我专注于移动端开发<br/>
 #####  这里是[izzyleung关于知乎Api的分析](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
 
+#####  3.关于知乎获取图片的问题，如果直接访问会返回403 ，这是知乎防盗链机制，在参考cccyb的知乎日报时，用了以下函数替换连接来间接访问知乎的图片，
+#####  但依然存在有时加载过慢的情况，会在后续改善
 
 >说明:
-##### 算是刚开个头吧，有些东西还需要之后完善实现，现在的效果图如下:<br/>
+##### 现阶段主要实现通过vue来展现一些从知乎日报中获取的内容数据和评论数据，还有很多地方没有实现，会在后续的版本中完善实现
+##### 现在的效果图如下:<br/>
 ![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu1.gif)<br/>
 ![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu2.gif)<br/>
 ![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu3.gif)<br/>
@@ -55,7 +58,7 @@
 ##### (待补充)
 
 
-
+>By KoimeijiLogi 
 
 ## Build Setup
 
