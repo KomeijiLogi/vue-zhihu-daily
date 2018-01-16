@@ -4,7 +4,7 @@
 
 
 >版权声明:
-## App调用知乎日报的接口，仅供学习练习所用，涉及到的知乎相关内容归知乎所有
+### App调用知乎日报的接口，仅供学习练习所用，涉及到的知乎相关内容归知乎所有
 
 >技术栈
 
@@ -39,8 +39,8 @@
    </code>  
 </pre>
 
-####  2.知乎Api的开发文档参考的是izzyleung对于知乎api的分析，感谢izzyleung提供了api详情以让我专注于移动端开发
-####  这里是[izzyleung关于知乎Api的分析](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
+#####  2.知乎Api的开发文档参考的是izzyleung对于知乎api的分析，感谢izzyleung提供了api详情以让我专注于移动端开发<br/>
+#####  这里是[izzyleung关于知乎Api的分析](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
 
 
 >说明:
