@@ -1,5 +1,20 @@
 <template>
   <div class="comment">
+      <span v-if="commitLongDatas.length!=0">长评论</span>
+      <ul class="comment-ul">
+        <li v-for="j in commitLongDatas" class="comment-li">
+            <div class="comment-user">
+                <span>{{j.author}}</span>
+                <img v-lazy="attachImgUrl(j.avatar)"/>
+            </div>
+            <p>{{j.content}}</p>
+            <div v-for="i in j.reply_to">
+               <p>{{i.author}}</p>
+               <p>{{i.content}}</p>
+            </div>
+        </li>
+      </ul>
+      <span>短评论</span>
       <ul class="comment-ul">
          <li v-for="k in commitDatas.comments" class="comment-li">
             <div class="comment-user">
@@ -10,13 +25,12 @@
          </li>
       </ul>
       <footer class="comment-footer">
-
-           <div >
-              去评论
-           </div>
-        <router-link to="/">
-          <span class="iconfont icon-back" ></span>
-        </router-link>
+           <!--<div>-->
+              <!--去评论-->
+           <!--</div>-->
+        <!--<router-link to="/">-->
+          <!--<span class="iconfont icon-back" ></span>-->
+        <!--</router-link>-->
 
       </footer>
   </div>
@@ -26,8 +40,8 @@
     export default {
        data(){
           return{
-             commitDatas:'',  //评论集合
-
+             commitDatas:'',  //短评论集合
+             commitLongDatas:''  //长评论集合
           }
        },
        created(){
@@ -39,7 +53,14 @@
             })
             .catch((err)=>{
               console.log(err);
+            });
+          this.$axios.get('/api/story/'+id+'long-comments')
+            .then((res)=>{
+               this.commitLongDatas=res.data;
             })
+            .catch((err)=>{
+              console.log(err);
+            });
        },
        methods:{
          //修改图片链接
