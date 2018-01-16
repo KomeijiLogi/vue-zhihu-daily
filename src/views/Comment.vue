@@ -1,7 +1,7 @@
 <template>
   <div class="comment">
       <span v-if="commitLongDatas.length!=0">长评论</span>
-      <ul class="comment-ul">
+      <ul class="comment-ul" v-if="commitLongDatas.length!=0">
         <li v-for="j in commitLongDatas" class="comment-li">
             <div class="comment-user">
                 <span>{{j.author}}</span>
@@ -24,25 +24,21 @@
             <p>{{k.content}}</p>
          </li>
       </ul>
-      <footer class="comment-footer">
-           <!--<div>-->
-              <!--去评论-->
-           <!--</div>-->
-        <!--<router-link to="/">-->
-          <!--<span class="iconfont icon-back" ></span>-->
-        <!--</router-link>-->
-
-      </footer>
+      <v-footer></v-footer>
   </div>
 </template>
 
 <script>
+    import Footer from '@/components/comment/footer.vue'
     export default {
        data(){
           return{
              commitDatas:'',  //短评论集合
              commitLongDatas:''  //长评论集合
           }
+       },
+       components:{
+          'v-footer':Footer
        },
        created(){
           //获取短评论详情
@@ -54,7 +50,7 @@
             .catch((err)=>{
               console.log(err);
             });
-          this.$axios.get('/api/story/'+id+'long-comments')
+          this.$axios.get('/api/story/'+id+'/long-comments')
             .then((res)=>{
                this.commitLongDatas=res.data;
             })
@@ -82,8 +78,10 @@
      .comment-ul{
        z-index: 1;
        list-style-type: none;
+       margin-bottom: 10vw;
        .comment-li{
-          border: #00a2ed 1px solid;
+          border: #acacac 1px solid;
+          border-radius: 3vw;
          margin: 1vw;
           div{
              text-align: right;
@@ -100,32 +98,10 @@
              text-indent: 2vw;
              text-align: left;
              .fz(font-size,30);
+
           }
        }
      }
-     .comment-footer{
-        .bt();
-        .bd();
-        height: 10vw;
-        z-index: 999;
-        bottom: 0;
-        display: flex;
-        flex-direction: row;
-        a{
 
-           width: 25%;
-          span{
-            .fz(font-size,50);
-          }
-        }
-        div{
-          padding: 1vw;
-          width: 75%;
-           .fz(font-size,30);
-          text-align: center;
-          /*border: #acacac 1px solid;*/
-          /*border-radius: 40%;*/
-        }
-     }
   }
 </style>
