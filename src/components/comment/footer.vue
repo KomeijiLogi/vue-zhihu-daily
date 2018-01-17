@@ -2,6 +2,7 @@
     <footer class="comment-footer">
       <router-link to="/">
          <i class="iconfont icon-back"></i>
+         <span>返回</span>
       </router-link>
       <router-link :to="{name:'写评论页',params:{id:this.$route.params.id}}">
         <div class="comment-jump">
@@ -30,14 +31,21 @@
       bottom: 0;
       position: fixed;
       box-sizing: border-box;
-
+      background-color: white;
       padding: 3vw;
       a{
 
-        text-align: right;
+
          i{
             .fz(font-size,40);
 
+         }
+         &:nth-child(1){
+            width: 25%;
+           text-align: center;
+         }
+         &:nth-child(2){
+            width: 75%;
          }
       }
   }

@@ -100,6 +100,9 @@
              .fz(font-size,30);
 
           }
+         &:nth-child(2){
+            margin-bottom:8vw;
+         }
        }
      }
 
