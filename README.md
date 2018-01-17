@@ -62,7 +62,6 @@
 ##### 现在的效果图如下:<br/>
 ![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu1.gif)<br/>
 ![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu2.gif)<br/>
-![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu3.gif)<br/>
 ![](https://github.com/KomeijiLogi/vzhihu-daily/blob/master/gif/zhihu4.gif)<br/>
 
 >项目结构:
