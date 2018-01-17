@@ -1,5 +1,23 @@
 <template>
     <div class="setting">
+      <section class="my-setting">
+        <router-link :to="{name:''}">
+          <div>
+            <span class="iconfont icon-process"></span>
+          </div>
+          <p>
+            <span>最近浏览</span><i class="iconfont icon-more"></i>
+          </p>
+        </router-link>
+        <router-link :to="{name:''}">
+          <div>
+            <span class="iconfont icon-set"></span>
+          </div>
+          <p>
+            <span>设置</span><i class="iconfont icon-more"></i>
+          </p>
+        </router-link>
+      </section>
       <section class="my-service">
         <router-link :to="{name:''}">
           <div>
@@ -49,8 +67,8 @@
 @import "../../assets/icons/iconfont";
 
  .setting{
-
-   .my-service{
+   margin-bottom: 10vw;
+   .my-setting,.my-service{
      width:100%;
      .mt();
      .bd();
