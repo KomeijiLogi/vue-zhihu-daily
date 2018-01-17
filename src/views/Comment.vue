@@ -14,6 +14,8 @@
             </div>
         </li>
       </ul>
+
+
       <span>短评论</span>
       <ul class="comment-ul">
          <li v-for="k in commitDatas.comments" class="comment-li">
@@ -52,6 +54,7 @@
             });
           this.$axios.get('/api/story/'+id+'/long-comments')
             .then((res)=>{
+               console.log(res.data);
                this.commitLongDatas=res.data;
             })
             .catch((err)=>{

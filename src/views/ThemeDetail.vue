@@ -112,6 +112,7 @@
        list-style-type: none;
        a{
          text-decoration: none;
+
        }
        li{
          text-align: left;
@@ -121,7 +122,8 @@
          line-height: 6vw;
          border: #acacac 1px solid;
          border-radius: 2.5vw;
-         margin: 3vw;
+         margin-right: 3vw;
+         margin-bottom: 3vw;
          color: black;
          justify-content: flex-end;
 
