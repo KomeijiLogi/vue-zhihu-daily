@@ -104,7 +104,7 @@
 
           }
          &:nth-child(2){
-            margin-bottom:8vw;
+            //margin-bottom:8vw;
          }
        }
      }
