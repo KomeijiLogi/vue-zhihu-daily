@@ -67,7 +67,7 @@
 @import "../../assets/icons/iconfont";
 
  .setting{
-   margin-bottom: 10vw;
+   margin-bottom: 15vw;
    .my-setting,.my-service{
      width:100%;
      .mt();
@@ -92,6 +92,7 @@
        -webkit-box-sizing: border-box;
        box-sizing: border-box;
        text-align: left;
+       text-decoration: none;
        &:active {
          background-color: rgb(224, 227, 230);
        }

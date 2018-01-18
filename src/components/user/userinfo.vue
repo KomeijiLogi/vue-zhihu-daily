@@ -107,6 +107,7 @@
        -webkit-box-sizing: border-box;
        box-sizing: border-box;
        text-align: left;
+       text-decoration: none;
        &:active {
          background-color: rgb(224, 227, 230);
        }

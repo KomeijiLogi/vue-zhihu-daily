@@ -3,7 +3,7 @@
        <span>通知列表</span>
        <section class="notice-area">
            <div class="notice-area-true" v-if="hasNotice">
-              
+
            </div>
            <div class="notice-area-false" v-else>
               <span>没有内容</span>
