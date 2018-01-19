@@ -2,7 +2,7 @@
     <mt-swipe :auto="4000">
         <mt-swipe-item v-for="k in topStories" :key="k.id" @click.native="toDetail(k.id)">
             <img :src="attachImgUrl(k.image)" :alt="k.title">
-            <span class="top-title">{{k.title}}</span>
+            <h3 class="top-title">{{k.title}}</h3>
         </mt-swipe-item>
     </mt-swipe>
 </template>
@@ -55,8 +55,14 @@
       display: block;
       width: 100%;
       height:100%;
+
+    }
+    img{
+
     }
     .top-title{
+      
+
       z-index: 9;
       color: whitesmoke;
       .fz(font-size,35);
