@@ -3,6 +3,7 @@
      <v-header ></v-header>
      <v-swiper></v-swiper>
      <v-section></v-section>
+
      <v-footer></v-footer>
 
   </div>
@@ -20,11 +21,7 @@
           'v-header':Header,
           'v-swiper':Swiper,
           'v-section':Section
-
         },
-
-
-
 
     }
 </script>

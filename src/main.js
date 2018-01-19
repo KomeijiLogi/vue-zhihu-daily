@@ -7,13 +7,17 @@ import mintui from 'mint-ui'   //mint-ui
 import 'mint-ui/lib/style.css'
 import store from '@/vuex/store.js'
 import axios from 'axios'
+import util from '@/util/common'
 
 Vue.config.productionTip = false
 Vue.use(mintui)
 Vue.prototype.$axios=axios;
 
-//对需要权限的页面验证权限并重定向
+let indexScrollTop=0;  //定义变量用来保存跳转前的scrolltop
+let dom=document.getElementById('app');  //找到根元素
+
 router.beforeEach((to, from, next) => {
+    //对需要权限的页面验证权限并重定向
     if(to.meta.requireAuth){
        //需要权限
        if(store.state.loginFlag){
@@ -29,10 +33,33 @@ router.beforeEach((to, from, next) => {
        }
     }else {
        //不需要权限
-       next();
+       //next();
+      //对跳转后的地址判断，保存前一地址的scrolltop
+      if(to.path=='/NewsDetail'){
+        dom=document.getElementById('app');
+        indexScrollTop=dom.scrollTop;
+        util.setLocal(indexScrollTop,'indexScrollTop',false);
+        next();
+      }else {
+        next();
+      }
     }
 
-})
+
+
+});
+
+router.afterEach((to,from)=>{
+   //跳转后页面如果是详情页的话，重置scrolltop为0，如果不是的话，取indexScrollTop
+   if(to.path=='/NewsDetail'){
+       dom.scrollTop=0;
+   }else {
+     Vue.nextTick(()=>{
+       dom.scrollTop=util.getLocal('indexScrollTop');
+     });
+
+   }
+});
 
 
 /* eslint-disable no-new */

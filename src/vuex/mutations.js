@@ -59,5 +59,8 @@ export default {
    //修改登录状态
    [types.CHANGE_LOGIN_FLAG](state,res){
       state.loginFlag=res;
+   },
+   [types.CHANGE_CIRCLE_FLAG](state,res){
+      state.CHANGE_CIRCLE_FLAG=res;
    }
 }

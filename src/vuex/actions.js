@@ -36,5 +36,9 @@ export default {
    //修改登录状态
    changeLoginFlag({commit},res){
       commit(types.CHANGE_LOGIN_FLAG,res);
-   }
+   },
+   //修改回弹按钮状态
+  changeCircleFlag({commit},res){
+      commit(types.CHANGE_CIRCLE_FLAG,res);
+  }
 }

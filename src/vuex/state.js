@@ -18,5 +18,6 @@ export default {
   newsType:-1,                //新闻类型  0:普通新闻 1:主体新闻 2:收藏新闻
   loginFlag:false,            //登录flag，true为已登录，flag为未登录,
   account:'',                  //用户账号
-  password:''                  //用户密码
+  password:'',                  //用户密码
+  circleFlag:false              //回弹按钮状态
 }

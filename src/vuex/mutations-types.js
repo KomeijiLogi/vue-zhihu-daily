@@ -35,6 +35,10 @@ export const CHANGE_CURRENT_THEME='CHANGE_CURRENT_THEME';
 export const CHANGE_LOGIN_FLAG='CHANGE_LOGIN_FLAG';
 
 
+//修改回弹按钮状态
+export  const CHANGE_CIRCLE_FLAG='CHANGE_CIRCLE_FLAG';
+
+
 
 
 
