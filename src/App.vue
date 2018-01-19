@@ -1,13 +1,27 @@
 <template>
   <div id="app">
     <!--<img src="./assets/logo.png">-->
-    <router-view/>
+    <div v-if="circle" class="circle" onclick="top">
+       <i class="iconfont icon-more"></i>
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  computed:{
+    circle(){
+       return this.$store.state.circleFlag;
+    }
+  },
+  methods:{
+     top(){
+       //回弹到顶部
+       
+     }
+  }
 }
 </script>
 

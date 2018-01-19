@@ -15,6 +15,8 @@ Vue.prototype.$axios=axios;
 
 let indexScrollTop=0;  //定义变量用来保存跳转前的scrolltop
 let dom=document.getElementById('app');  //找到根元素
+//let dom=document.querySelector('.index');
+
 
 router.beforeEach((to, from, next) => {
     //对需要权限的页面验证权限并重定向
@@ -29,25 +31,27 @@ router.beforeEach((to, from, next) => {
             path:'/login',
             query:{redirect:to.fullPath}
           });
-
        }
     }else {
        //不需要权限
        //next();
       //对跳转后的地址判断，保存前一地址的scrolltop
       if(to.path=='/NewsDetail'){
-        dom=document.getElementById('app');
-        indexScrollTop=dom.scrollTop;
-        util.setLocal(indexScrollTop,'indexScrollTop',false);
-        next();
+          dom=document.getElementById('app');
+          //dom=document.querySelector('.index');
+
+          indexScrollTop=dom.scrollTop;
+          util.setLocal(indexScrollTop,'indexScrollTop',false);
+          next();
       }else {
-        next();
+          next();
+
       }
     }
 
 
-
 });
+
 
 router.afterEach((to,from)=>{
    //跳转后页面如果是详情页的话，重置scrolltop为0，如果不是的话，取indexScrollTop
@@ -57,7 +61,6 @@ router.afterEach((to,from)=>{
      Vue.nextTick(()=>{
        dom.scrollTop=util.getLocal('indexScrollTop');
      });
-
    }
 });
 
