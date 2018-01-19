@@ -1,9 +1,8 @@
 <template>
-  <div class="index">
+  <div>
      <v-header ></v-header>
      <v-swiper></v-swiper>
      <v-section></v-section>
-
      <v-footer></v-footer>
 
   </div>
@@ -22,10 +21,9 @@
           'v-swiper':Swiper,
           'v-section':Section
         },
-
     }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 
 </style>

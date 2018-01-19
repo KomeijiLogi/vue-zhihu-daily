@@ -4,7 +4,7 @@
     <div v-if="circle" class="circle" onclick="top">
        <i class="iconfont icon-more"></i>
     </div>
-    <router-view />
+    <router-view class="routerView" />
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
   methods:{
      top(){
        //回弹到顶部
-       
+
      }
   }
 }
