@@ -14,8 +14,8 @@ Vue.use(mintui)
 Vue.prototype.$axios=axios;
 
 let indexScrollTop=0;  //定义变量用来保存跳转前的scrolltop
-//let dom=document.getElementById('app');  //找到根元素
-let dom=document.querySelector('body');
+let dom=document.getElementById('app');  //找到根元素
+//let dom=document.querySelector('body');
 console.log(dom);
 
 router.beforeEach((to, from, next) => {
@@ -37,8 +37,8 @@ router.beforeEach((to, from, next) => {
        //next();
       //对跳转后的地址判断，保存前一地址的scrolltop
       if(to.path=='/NewsDetail'){
-          //dom=document.getElementById('app');
-          dom=document.querySelector('.routerView');
+          dom=document.getElementById('app');
+          //dom=document.querySelector('.routerView');
           indexScrollTop=dom.scrollTop;
           //util.setLocal(indexScrollTop,'indexScrollTop',false);
           next();
@@ -56,7 +56,8 @@ router.afterEach((to,from)=>{
    }else {
      Vue.nextTick(()=>{
        //dom.scrollTop=util.getLocal('indexScrollTop');
-       dom.scrollTop=indexScrollTop;
+       //dom.scrollTop=indexScrollTop;
+       dom.scrollTop=0;
      });
    }
 });

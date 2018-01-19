@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-    <div v-if="circle" class="circle" onclick="top">
-       <i class="iconfont icon-more"></i>
-    </div>
+    <!--<div v-if="circle" class="circle" onclick="top">-->
+       <!--<i class="iconfont icon-more"></i>-->
+    <!--</div>-->
     <router-view class="routerView" />
   </div>
 </template>
@@ -12,15 +11,15 @@
 export default {
   name: 'app',
   computed:{
-    circle(){
-       return this.$store.state.circleFlag;
-    }
+    // circle(){
+    //    return this.$store.state.circleFlag;
+    // }
   },
   methods:{
-     top(){
-       //回弹到顶部
+     // top(){
+     //   //回弹到顶部
 
-     }
+     // }
   }
 }
 </script>
