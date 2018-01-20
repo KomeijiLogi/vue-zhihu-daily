@@ -58,13 +58,13 @@
 
     }
     img{
-
+       filter: grayscale(20%);
+       -webkit-filter: grayscale(20%);
     }
     .top-title{
-      
 
       z-index: 9;
-      color: whitesmoke;
+      color: #ffeafd;     //调整字体颜色，突出字体
       .fz(font-size,35);
       position: absolute;
       bottom: 0;

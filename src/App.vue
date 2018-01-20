@@ -1,26 +1,13 @@
 <template>
   <div id="app">
-    <!--<div v-if="circle" class="circle" onclick="top">-->
-       <!--<i class="iconfont icon-more"></i>-->
-    <!--</div>-->
-    <router-view class="routerView" />
+    <router-view ref="routerView"/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  computed:{
-    // circle(){
-    //    return this.$store.state.circleFlag;
-    // }
-  },
-  methods:{
-     // top(){
-     //   //回弹到顶部
+  name: 'app'
 
-     // }
-  }
 }
 </script>
 

@@ -4,7 +4,6 @@
      <v-swiper></v-swiper>
      <v-section></v-section>
      <v-footer></v-footer>
-
   </div>
 </template>
 
@@ -24,6 +23,6 @@
     }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 
 </style>
