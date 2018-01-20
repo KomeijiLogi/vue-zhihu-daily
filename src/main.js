@@ -14,10 +14,10 @@ Vue.use(mintui)
 Vue.prototype.$axios=axios;
 
 let indexScrollTop=0;  //定义变量用来保存跳转前的scrolltop
-//let dom=document.getElementById('app');
+let dom=document.getElementById('app');
 
 //找到根元素
-let dom =null;
+//let dom =null;
 console.log(dom);
 
 
