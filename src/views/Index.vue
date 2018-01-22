@@ -32,8 +32,8 @@
         computed:mapState({
           circleFlag:state=>state.circleFlag      //映射vuex中的circleFlag
         }),
-        methods:{
-
+        mounted(){
+            this.scroller=this.$el;     //将当前根元素给scroller
         }
     }
 </script>
