@@ -8,17 +8,18 @@ import 'mint-ui/lib/style.css'
 import store from '@/vuex/store.js'
 import axios from 'axios'
 import util from '@/util/common'
+//import * as resource from '@/http/resource.js'
 
 Vue.config.productionTip = false
 Vue.use(mintui)
+
 Vue.prototype.$axios=axios;
 
 let indexScrollTop=0;  //定义变量用来保存跳转前的scrolltop
-let dom=document.getElementById('app');
+let dom=document.querySelector('#app');
 
 //找到根元素
-//let dom =null;
-console.log(dom);
+//console.log(dom);
 
 
 router.beforeEach((to, from, next) => {

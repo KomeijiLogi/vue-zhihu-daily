@@ -19,7 +19,7 @@
           'v-header':Header,
           'v-swiper':Swiper,
           'v-section':Section
-        },
+        }
     }
 </script>
 

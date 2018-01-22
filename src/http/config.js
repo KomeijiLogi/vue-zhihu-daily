@@ -4,3 +4,4 @@ var config={
   method: '/get?api='
 }
 export const API_ROOT='https://'.concat( config.site, config.method )
+

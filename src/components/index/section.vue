@@ -23,7 +23,7 @@
 <script>
 
     import { Indicator } from 'mint-ui'
-
+    import * as resource from '@/http/resource.js'
     export default {
        data(){
          return{
@@ -98,7 +98,7 @@
          },
          //根据日期请求过往数据 >=20130520
          fetchMoreDatas(){
-
+             //this.decrDate();
              this.$axios.get('/api/news/before/'+this.dateStr)
                .then((res)=>{
                  //合并数据

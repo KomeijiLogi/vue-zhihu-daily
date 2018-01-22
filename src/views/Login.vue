@@ -7,7 +7,7 @@
        <mt-field label="账号" placeholder="请输入账号" v-model="account"></mt-field>
        <mt-field label="密码" placeholder="请输入密码" v-model="password" type="password"></mt-field>
      </div>
-     <span class="login-tips">tips:账号和密码需要包含admin</span>
+     <span class="login-tips">tips:账号和密码admin</span>
      <div class="login-button">
        <mt-button type="primary"  @click="login" size="normal">
          登录
