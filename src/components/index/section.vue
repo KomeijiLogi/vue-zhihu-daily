@@ -23,7 +23,7 @@
 <script>
 
     import { Indicator } from 'mint-ui'
-    import * as resource from '@/http/resource.js'
+
     export default {
        data(){
          return{
