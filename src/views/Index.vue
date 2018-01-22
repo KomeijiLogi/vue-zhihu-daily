@@ -3,7 +3,8 @@
      <v-header ></v-header>
      <v-swiper></v-swiper>
      <v-section></v-section>
-     <v-backscroll :scroller="scroller" :flag="circleFlag"></v-backscroll>
+     <v-backscroll :scroller="scroller" :flag="circleFlag"  onclick="scrolltoTop">
+     </v-backscroll>
      <v-footer></v-footer>
   </div>
 </template>
@@ -34,6 +35,12 @@
         }),
         mounted(){
             this.scroller=this.$el;     //将当前根元素给scroller
+        },
+        methods:{
+           //回到顶部方法
+           scrolltoTop(){
+
+           }
         }
     }
 </script>

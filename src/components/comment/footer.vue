@@ -1,6 +1,6 @@
 <template>
     <footer class="comment-footer">
-      <router-link to="/">
+      <router-link :to="{name:'详情页',params:{id:this.$route.params.id}}">
          <i class="iconfont icon-back"></i>
          <span>返回</span>
       </router-link>

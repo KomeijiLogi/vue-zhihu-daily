@@ -1,4 +1,7 @@
 <template>
+   <div class="backScroll">
+      <i class="iconfont icon-moreunfold"></i>
+   </div>
 </template>
 <script>
     import Scroll from './backScroll'
@@ -28,5 +31,18 @@
 </script>
 
 <style lang="less" scoped>
+@import "../../assets/fz";
+@import "../../assets/icons/iconfont";
+  div{
+      z-index: 99999;
+      position: fixed;
+     right: 0;
+     .fz(bottom,40);
+     i{
+       //翻转180
+       transform: rotate(-180deg);
+       -webkit-transform: rotate(-180deg);
 
+     }
+  }
 </style>
