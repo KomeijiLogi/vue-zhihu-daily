@@ -44,12 +44,18 @@
 
 <script>
     import {Toast} from 'mint-ui'
+    import Util from '@/util/common.js'
     export default {
 
        methods:{
           logout(){
             //变更登录flag
             this.$store.commit('CHANGE_LOGIN_FLAG',false);
+            //清除localstorage中存储的账号密码信息
+            Util.setLocal('','account',false);
+            Util.setLocal('','password',false);
+            
+
             Toast(`退出登录`);
             //延迟2秒跳转
             setTimeout(()=>{

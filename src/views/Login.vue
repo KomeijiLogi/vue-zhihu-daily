@@ -34,9 +34,9 @@
 
          }
       },
-     mounted:{
-       
+     mounted(){
 
+        this.getAccMsg();
      },
       methods:{
         login(){
