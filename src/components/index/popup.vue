@@ -130,6 +130,7 @@
             li {
               padding: 2vw;
               line-height: 4vw;
+              .bt();
               span{
                 .fz(margin-left,20);
               }
