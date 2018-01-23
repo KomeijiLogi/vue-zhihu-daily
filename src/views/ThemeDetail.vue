@@ -72,6 +72,7 @@
     .header-theme{
        background-color: #00a2ed;
        color: white;
+       
     }
     .theme-bg{
       height: 60vw;
@@ -126,7 +127,7 @@
          margin-bottom: 3vw;
          color: black;
          justify-content: flex-end;
-
+         box-shadow: 10px 10px 5px #888888;
          span{
             .fz(font-size,28);
             font-weight: 700;
