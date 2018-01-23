@@ -34,7 +34,10 @@
 
          }
       },
-      
+     mounted:{
+       
+
+     },
       methods:{
         login(){
             //正式应该为调用用户接口，通过后台返回的数据验证用户的合法性，
@@ -74,6 +77,14 @@
         reset(){
           this.account='';
           this.password='';
+        },
+        getAccMsg(){
+             let acc=Util.getLocal('account');
+             let pwd=Util.getLocal('password');
+             if(acc&&pwd){
+                this.account=acc;
+                this.password=pwd;
+             }
         }
       }
     }
