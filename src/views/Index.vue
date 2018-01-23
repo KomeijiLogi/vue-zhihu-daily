@@ -3,7 +3,7 @@
      <v-header ></v-header>
      <v-swiper></v-swiper>
      <v-section></v-section>
-     <v-backscroll :scroller="scroller" :flag="circleFlag"  onclick="top()">
+     <v-backscroll :scroller="scroller" :flag="circleFlag"  onclick="top">
      </v-backscroll>
      <v-footer></v-footer>
   </div>
@@ -40,8 +40,10 @@
            //回到顶部方法
            top(){
               const dom=document.querySelector('index');
-              dom.scrollTop=0;
 
+              this.nextTick(()=>{
+                dom.scrollTop=0;
+              })
            }
         }
     }

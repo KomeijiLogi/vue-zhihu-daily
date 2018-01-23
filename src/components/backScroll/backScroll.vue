@@ -38,8 +38,8 @@
       position: fixed;
      .fz(right,60);
      .fz(bottom,120);
-     border-radius: 75%;
-     background-color: violet;
+     border-radius: 100%;
+     background-color: #81C1EF;
      opacity: 0.8;
     //翻转180
     transform: rotate(180deg);

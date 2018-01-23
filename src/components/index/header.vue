@@ -26,6 +26,7 @@
         showPopup(){
            //控制左侧弹出侧边栏
            this.popupVisible=!this.popupVisible;
+
         }
       }
     }

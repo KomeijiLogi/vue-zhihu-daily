@@ -22,6 +22,7 @@
 <script>
     import Header from '@/common/header.vue'
     import {Toast} from 'mint-ui'
+    import Util from '@/util/common.js'
     export default {
       components:{
         'v-header':Header
@@ -33,6 +34,7 @@
 
          }
       },
+      
       methods:{
         login(){
             //正式应该为调用用户接口，通过后台返回的数据验证用户的合法性，
@@ -50,6 +52,11 @@
                }
                //改变登录flag
                this.$store.commit('CHANGE_LOGIN_FLAG',true);
+
+               //暂存账号密码到localstorage中
+               Util.setLocal(this.password,'password',false);
+               Util.setLocal(this.account,'account',false);
+
                Toast(`登录成功，即将跳转`);
                //延迟2秒跳转到用户页
                setTimeout(()=>{
