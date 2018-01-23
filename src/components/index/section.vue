@@ -185,6 +185,7 @@
          img{
             height: 20%;
             width: 20%;
+           border-radius: 2.5vw;
          }
        }
     }
