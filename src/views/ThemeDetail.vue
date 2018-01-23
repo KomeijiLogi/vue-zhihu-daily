@@ -72,7 +72,7 @@
     .header-theme{
        background-color: #00a2ed;
        color: white;
-       
+
     }
     .theme-bg{
       height: 60vw;
