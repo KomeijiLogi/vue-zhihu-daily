@@ -85,7 +85,8 @@
        .comment-li{
           border: #acacac 1px solid;
           border-radius: 3vw;
-         margin: 1vw;
+          box-shadow: 10px 10px 5px #888888;
+         margin: 3vw;
           div{
              text-align: right;
              span{
