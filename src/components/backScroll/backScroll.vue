@@ -36,13 +36,21 @@
   div{
       z-index: 99999;
       position: fixed;
-     right: 0;
-     .fz(bottom,40);
-     i{
-       //翻转180
-       transform: rotate(-180deg);
-       -webkit-transform: rotate(-180deg);
-
-     }
+     .fz(right,60);
+     .fz(bottom,120);
+     border-radius: 75%;
+     background-color: violet;
+     opacity: 0.8;
+    //翻转180
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    box-shadow: 0px 0px #888888;
+    i{
+       color: white;
+    }
   }
+  .iconfont::before{
+     .fz(font-size,80);
+  }
+
 </style>

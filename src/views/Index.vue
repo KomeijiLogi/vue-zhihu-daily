@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="index">
      <v-header ></v-header>
      <v-swiper></v-swiper>
      <v-section></v-section>
-     <v-backscroll :scroller="scroller" :flag="circleFlag"  onclick="scrolltoTop">
+     <v-backscroll :scroller="scroller" :flag="circleFlag"  onclick="top()">
      </v-backscroll>
      <v-footer></v-footer>
   </div>
@@ -38,7 +38,9 @@
         },
         methods:{
            //回到顶部方法
-           scrolltoTop(){
+           top(){
+              const dom=document.querySelector('index');
+              dom.scrollTop=0;
 
            }
         }

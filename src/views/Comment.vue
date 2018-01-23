@@ -81,7 +81,7 @@
      .comment-ul{
        z-index: 1;
        list-style-type: none;
-       margin-bottom: 10vw;
+       margin-bottom: 15vw;
        .comment-li{
           border: #acacac 1px solid;
           border-radius: 3vw;
