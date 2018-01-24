@@ -54,7 +54,7 @@
             //清除localstorage中存储的账号密码信息
             Util.setLocal('','account',false);
             Util.setLocal('','password',false);
-            
+
 
             Toast(`退出登录`);
             //延迟2秒跳转

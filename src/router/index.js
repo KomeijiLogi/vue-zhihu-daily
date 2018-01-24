@@ -68,12 +68,12 @@ export default new Router({
     },
     {
       path:'/editor/:editorId/:editorName',
-      name:'编辑页',
+      name:'编辑详情页',
       component:Editor
     },
     {
       path:'/editorList/:id',
-      name:'列表页',
+      name:'编辑列表页',
       component:EditorList
     }
   ]

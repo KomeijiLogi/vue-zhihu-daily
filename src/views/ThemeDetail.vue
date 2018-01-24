@@ -8,7 +8,7 @@
        <img :src="attachImgUrl(datas.background)" class="theme-bg" />
        <span class="theme-title">{{datas.description}}</span>
        <div class="theme-editor">
-          <router-link to="/">
+          <router-link :to="{name:'编辑列表页',params:{id:this.$route.params.id}}">
             <span>主编</span>
             <div v-for="n in datas.editors">
               <img v-lazy="attachImgUrl(n.avatar)"/>
