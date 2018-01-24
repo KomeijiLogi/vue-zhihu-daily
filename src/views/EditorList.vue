@@ -6,7 +6,7 @@
          </h2>
        </v-header>
        <ul class="editor-list">
-          <li v-for="k in datas.editors">
+          <li v-for="k in datas.editors" @click="toggleJump(k.id,k.name)">
              <img :src="attachImgUrl(k.avatar)"/>
             <div>
               <span>{{k.name}}</span>
@@ -47,6 +47,16 @@
               return String(url).replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p');
             }
           },
+          //点击跳转事件，跳转到每个编辑的详情页  id为编辑编辑编号，从datas中获取
+          toggleJump(id,name){
+             this.$router.push({
+                 path:'/editor',
+                 query:{
+                   editorId:id,
+                   editorName:name
+                 }
+             })
+          }
         }
     }
 </script>

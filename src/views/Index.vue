@@ -3,7 +3,7 @@
      <v-header ></v-header>
      <v-swiper></v-swiper>
      <v-section></v-section>
-     <v-backscroll :scroller="scroller" :flag="circleFlag"  onclick="top">
+     <v-backscroll :scroller="scroller" :flag="circleFlag"  @click="top()">
      </v-backscroll>
      <v-footer></v-footer>
   </div>

@@ -169,7 +169,8 @@
     list-style-type: none;
     padding: 0;
     li{
-      box-shadow: 10px 10px 5px #888888;
+       box-shadow: 10px 10px 5px #888888;
+       //filter: drop-shadow(10px 10px 5px #888888);
        border: #a7a7a7 1px solid;
        border-radius: 2.5vw;
        margin: 3vw;
