@@ -58,13 +58,14 @@
 
     }
     img{
-       filter: grayscale(20%);
-       -webkit-filter: grayscale(20%);
+       //调整亮度
+       filter: brightness(.7);
+       -webkit-filter: brightness(.7);
     }
     .top-title{
 
       z-index: 9;
-      color: #ffeafd;     //调整字体颜色，突出字体
+      color: whitesmoke;     //调整字体颜色，突出字体
       .fz(font-size,35);
       position: absolute;
       bottom: 0;
