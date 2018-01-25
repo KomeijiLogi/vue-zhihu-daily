@@ -8,7 +8,7 @@
                 <img v-lazy="attachImgUrl(j.avatar)"/>
             </div>
             <p>{{j.content}}</p>
-            <p class="time">{{timestampToDate(j.time)}}</p>
+
             <!--<div v-for="i in j.reply_to" v-if="j.reply_to">-->
                <!--<p>{{i.author}}</p>-->
                <!--<p>{{i.content}}</p>-->
@@ -17,6 +17,7 @@
               <p>{{j.reply_to.author}}</p>
               <p>{{j.reply_to.content}}</p>
            </div>
+          <p class="time">{{timestampToDate(j.time)}}</p>
         </li>
       </ul>
 
@@ -80,6 +81,7 @@
          timestampToDate(timestamp){
            //获取时间戳转换的日期
           return  new Date(parseInt(timestamp) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+
          }
        }
 
@@ -128,6 +130,7 @@
              color: #a7a7a7;
              text-align: right;
              .fz(font-size,25);
+             font-weight: 900;
            }
            p:nth-child(2){
               .fz(font-size,27);
