@@ -17,7 +17,7 @@
         //name: "messagemain"
         data(){
            return{
-              hasNotice:true   //是否有通知内容
+              hasNotice:false   //是否有通知内容
            }
         }
     }
@@ -28,6 +28,7 @@
   @import "../../assets/icons/iconfont";
   .messagemain{
      span{
+        
 
      }
   }
