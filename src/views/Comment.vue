@@ -1,6 +1,6 @@
 <template>
   <div class="comment">
-      <span v-if="commitLongDatas.comments.length!=0">长评论</span>
+      <span>长评论</span>
       <ul class="comment-ul" v-if="commitLongDatas.length!=0">
         <li v-for="j in commitLongDatas.comments" class="comment-li">
             <div class="comment-user">
