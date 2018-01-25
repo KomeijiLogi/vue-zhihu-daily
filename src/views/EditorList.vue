@@ -50,8 +50,8 @@
           //点击跳转事件，跳转到每个编辑的详情页  id为编辑编辑编号，从datas中获取
           toggleJump(id,name){
              this.$router.push({
-                 path:'/editor',
-                 query:{
+                 name:'编辑详情页',
+                 params:{
                    editorId:id,
                    editorName:name
                  }
