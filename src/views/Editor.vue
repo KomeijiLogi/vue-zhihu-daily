@@ -1,6 +1,6 @@
 <template>
     <div class="editor">
-        <iframe>
+        <iframe seamless sandbox="">
 
         </iframe>
     </div>
@@ -37,7 +37,7 @@
   .editor{
      iframe{
         width: 100%;
-        height: 120vw;
+        height: 135vw;
      }
   }
 </style>
