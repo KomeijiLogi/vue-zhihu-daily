@@ -12,8 +12,9 @@
   </div>
 </template>
 
-<script>
 
+<script>
+    import share from '@/util/social-share2.js'
     export default {
        created(){
           //创建时调用share
@@ -27,7 +28,6 @@
 @import "../../assets/fz";
 div{
    background-color: white;
-
    white-space: normal;
    line-break: auto;
    div{
