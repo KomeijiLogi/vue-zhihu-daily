@@ -9,6 +9,7 @@
       <a href="#" class="social-share-icon icon-google"></a>
       <a href="#" class="social-share-icon icon-facebook"></a>
     </div>
+
   </div>
 </template>
 
@@ -18,7 +19,8 @@
     export default {
        created(){
           //创建时调用share
-
+          //share.socialShare('#share');
+          share;
        }
     }
 </script>

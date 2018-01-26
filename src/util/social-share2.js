@@ -1,6 +1,7 @@
 
 const share=(function (window,document,undefined) {
   // Initialize a variables.
+  //debugger;
 
   var Array$indexOf = Array.prototype.indexOf;
   var Object$assign = Object.assign;
@@ -56,12 +57,13 @@ const share=(function (window,document,undefined) {
    * @param  {Object} options
    */
   window.socialShare = function (elem, options) {
+    //debugger;
     elem = typeof elem === 'string' ? querySelectorAlls(elem) : elem;
 
     if (elem.length === undefined) {
       elem = [elem];
     }
-
+    console.log(elem);
     each(elem, function (el) {
       if (!el.initialized) {
         share(el, options);
