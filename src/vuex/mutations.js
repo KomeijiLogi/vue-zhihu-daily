@@ -62,11 +62,11 @@ export default {
    },
    //修改回弹按钮状态
    [types.CHANGE_CIRCLE_FLAG](state,res){
-      state.CHANGE_CIRCLE_FLAG=res;
+      state.circleFlag=res;
    },
    //修改分享弹出层状态
    [types.CHANGE_SHARE_FLAG](state,res){
-      state.CHANGE_SHARE_FLAG=res;
+      state.shareFlag=!state.shareFlag;
    }
 
 }

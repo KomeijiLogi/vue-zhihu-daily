@@ -3,7 +3,7 @@
       <router-link to="/">
           <i class="iconfont icon-back"></i>
       </router-link>
-      <div @click="share()">
+      <div @click="share">
         <i class="iconfont icon-process"></i>
       </div>
       <div>
@@ -43,7 +43,8 @@
         methods:{
           share(){
              //分享按钮点击事件,修改弹出层状态,显示弹出层，然后调用social-share.js来实现分享
-             this.$store.dispatch('changeShareFlag',true);
+             this.$store.dispatch('changeShareFlag');
+             //console.log(this.$store.state.shareFlag);
           }
         }
     }

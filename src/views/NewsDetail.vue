@@ -18,6 +18,7 @@
         },
         computed:{
            shareFlag(){
+
               return this.$store.state.shareFlag;
           }
         }
@@ -30,6 +31,13 @@
 div{
    .share{
       z-index: 9999;
+      bottom:18vw;
+      position: fixed;
+      right: 0;
+      left: 0;
+      height: 10vw;
+      .bt();
+      .bd();
    }
 }
 

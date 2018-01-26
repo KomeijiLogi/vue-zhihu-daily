@@ -9,13 +9,16 @@ import store from '@/vuex/store.js'
 import axios from 'axios'
 import util from '@/util/common'
 //import * as resource from '@/http/resource.js'
+//import share from '@/util/social-share'
 
+import share from '@/util/social-share.js'      //引入第三方分享js
+import qrcode from '@/util/qrcode.js'
 
 Vue.config.productionTip = false
 Vue.use(mintui)
 
 Vue.prototype.$axios=axios;
-
+Vue.prototype.$share=share;
 
 let indexScrollTop=0;  //定义变量用来保存跳转前的scrolltop
 let dom=document.querySelector('#app');
