@@ -36,6 +36,9 @@
   .mint-header{
     /*opacity: 0.8;*/
     background-color: rgba(255,255,255,0.4);
-    color: #76B4ED;
+    //color: #76B4ED;
+    color: white;
+    filter:contrast(2);    //对比度
+    -webkit-filter: contrast(2);
   }
 </style>
