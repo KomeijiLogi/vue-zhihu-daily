@@ -478,4 +478,5 @@ const share=(function (window,document,undefined) {
   }
 })(window,document);
 
-export default share;
+//export default share;
+export {share};
