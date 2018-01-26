@@ -16,7 +16,7 @@
 #### es6
 #### webpack
 #### vue-cli
-
+#### iconfont
 
 ##### 主要使用了vue2.x全家桶，vue路由控制跳转以及访问页面控制，用vuex管理状态，样式方面使用less来布局，用iconfont阿里图片库提供素材，用axios实现与接口通信
 
