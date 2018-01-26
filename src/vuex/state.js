@@ -19,5 +19,6 @@ export default {
   loginFlag:false,            //登录flag，true为已登录，flag为未登录,
   account:'',                  //用户账号
   password:'',                  //用户密码
-  circleFlag:false              //回弹按钮状态
+  circleFlag:false,              //回弹按钮状态
+  shareFlag:false,               //分享弹出层状态，false隐藏，true显示
 }

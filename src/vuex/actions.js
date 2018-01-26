@@ -40,5 +40,9 @@ export default {
    //修改回弹按钮状态
   changeCircleFlag({commit},res){
       commit(types.CHANGE_CIRCLE_FLAG,res);
+  },
+  //修改弹出层状态
+  changeShareFlag({commit},res){
+     commit(types.CHANGE_SHARE_FLAG,res);
   }
 }
