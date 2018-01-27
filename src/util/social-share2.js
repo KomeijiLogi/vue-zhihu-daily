@@ -1,7 +1,7 @@
 
 const share=(function (window,document,undefined) {
   // Initialize a variables.
-  //debugger;
+  debugger;
 
   var Array$indexOf = Array.prototype.indexOf;
   var Object$assign = Object.assign;
@@ -57,7 +57,7 @@ const share=(function (window,document,undefined) {
    * @param  {Object} options
    */
   window.socialShare = function (elem, options) {
-    //debugger;
+    debugger;
     elem = typeof elem === 'string' ? querySelectorAlls(elem) : elem;
 
     if (elem.length === undefined) {
@@ -85,6 +85,7 @@ const share=(function (window,document,undefined) {
    * @return {Void}
    */
   function share(elem, options) {
+    debugger;
     var data = mixin({}, defaults, options || {}, dataset(elem));
 
     if (data.imageSelector) {
@@ -221,6 +222,7 @@ const share=(function (window,document,undefined) {
    * @returns {*}
    */
   function querySelectorAlls(str) {
+    debugger;
     return (document.querySelectorAll || window.jQuery || window.Zepto || selector).call(document, str);
   }
 
@@ -339,6 +341,7 @@ const share=(function (window,document,undefined) {
    * @returns {Object}
    */
   function mixin() {
+    debugger;
     var args = arguments;
 
     if (Object$assign) {
@@ -434,6 +437,7 @@ const share=(function (window,document,undefined) {
    * @returns {*}
    */
   function each(obj, callback) {
+    debugger;
     var length = obj.length;
 
     if (length === undefined) {
@@ -462,6 +466,7 @@ const share=(function (window,document,undefined) {
    * @link https://github.com/jed/alReady.js
    */
   function alReady ( fn ) {
+    debugger;
     var add = 'addEventListener';
     var pre = document[ add ] ? '' : 'on';
 
@@ -478,5 +483,5 @@ const share=(function (window,document,undefined) {
   }
 })(window,document);
 
-//export default share;
-export {share};
+export default share;
+//export {share};

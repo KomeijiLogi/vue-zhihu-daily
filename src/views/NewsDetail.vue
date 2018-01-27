@@ -1,7 +1,7 @@
 <template>
    <div>
       <v-main></v-main>
-      <v-share v-if="shareFlag" class="share"></v-share>
+      <v-share v-show="shareFlag" class="share"></v-share>
       <v-footer></v-footer>
    </div>
 </template>

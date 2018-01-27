@@ -19,7 +19,7 @@
        created(){
           //创建时调用share
           //share.socialShare('#share');
-          share;
+          //share;
        }
     }
 </script>
