@@ -8,16 +8,16 @@
 
 >技术栈
 
-#### vue2.x       //项目前端核心框架
-#### vuex         //vue状态管理
-#### vue-router   //vue路由控制
-#### axios        //vue中ajax实现,官方推荐,vue-resource已停止更新
-#### less         //动态样式语言  
-#### es6          //js新标准 
-#### webpack      //打包工具
-#### vue-cli      //vue项目构建工具
-#### iconfont     //字体图标样式文件
-#### normalize.css  //css标准化文件，对html元素预处理
+#### vue2.x       --项目前端核心框架
+#### vuex         --vue状态管理
+#### vue-router   --vue路由控制
+#### axios        --vue中ajax实现,官方推荐,vue-resource已停止更新
+#### less         --动态样式语言  
+#### es6          --js新标准 
+#### webpack      --打包工具
+#### vue-cli      --vue项目构建工具
+#### iconfont     --字体图标样式文件
+#### normalize.css  --css标准化文件，对html元素预处理
 
 ##### 主要使用了vue2.x全家桶，vue路由控制跳转以及访问页面控制，用vuex管理状态，样式方面使用less来布局，用iconfont阿里图片库提供素材，用axios实现与接口通信
 
