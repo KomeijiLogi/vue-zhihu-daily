@@ -1,6 +1,7 @@
 <template>
    <div class="backScroll">
-      <i class="iconfont icon-moreunfold"></i>
+      <!--<i class="iconfont icon-moreunfold"></i>-->
+      <img src="../../assets/top.png" />
    </div>
 </template>
 <script>
@@ -38,16 +39,18 @@
       position: fixed;
      .fz(right,60);
      .fz(bottom,120);
-     border-radius: 100%;
-     background-color: #81C1EF;
-     opacity: 0.8;
+     border-radius: 75%;
+     background-color: white;
+     opacity: 1;
     //翻转180
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    box-shadow: 0px 0px #888888;
-    i{
-       color: white;
-    }
+    /*transform: rotate(180deg);*/
+    /*-webkit-transform: rotate(180deg);*/
+    //box-shadow: 0px 0px #888888;
+    -webkit-filter: drop-shadow(1px,1px,1px,#888888);
+    filter:drop-shadow(1px,1px,1px,#888888);
+    /*i{*/
+       /*color: #a7a7a7;*/
+    /*}*/
   }
   .iconfont::before{
      .fz(font-size,80);

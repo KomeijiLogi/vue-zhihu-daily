@@ -19,12 +19,11 @@ import 'normalize.css'       //引入标准化css，对元素css作初始化
 
 Vue.config.productionTip = false
 Vue.use(mintui)
-
 Vue.prototype.$axios=axios;
 
 
 let indexScrollTop=0;  //定义变量用来保存跳转前的scrolltop
-let dom=document.querySelector('#app');
+let dom=document.documentElement;
 
 //找到根元素
 //console.log(dom);
@@ -49,10 +48,10 @@ router.beforeEach((to, from, next) => {
        //next();
       //对跳转后的地址判断，保存前一地址的scrolltop
       if(to.path=='/NewsDetail'){
-          //dom=document.getElementById('app');
-          dom=document.querySelector('.routerView');
+
+          dom=document.documentElement;
           indexScrollTop=dom.scrollTop;
-          //util.setLocal(indexScrollTop,'indexScrollTop',false);
+          //console.log(indexScrollTop);
           next();
       }else {
           next();
@@ -67,9 +66,9 @@ router.afterEach((to,from)=>{
        dom.scrollTop=0;
    }else {
      Vue.nextTick(()=>{
-       //dom.scrollTop=util.getLocal('indexScrollTop');
+
        dom.scrollTop=indexScrollTop;
-       //dom.scrollTop=0;
+
      });
    }
 });

@@ -2,8 +2,8 @@
   <div class="index">
      <v-header ></v-header>
      <v-swiper></v-swiper>
-     <v-section></v-section>
-     <v-backscroll :scroller="scroller" :flag="circleFlag"  @click="top()">
+     <v-section ></v-section>
+     <v-backscroll :scroller="scroller" :flag="circleFlag"  @click.native="top()">
      </v-backscroll>
      <v-footer></v-footer>
   </div>
@@ -17,6 +17,7 @@
     import BackSrocll from '@/components/backScroll/backScroll.vue'
     import state from "../vuex/state";
     import { mapState } from 'vuex';
+    import {Toast} from 'mint-ui'
     export default {
         components:{
           'v-footer':Footer,
@@ -39,10 +40,12 @@
         methods:{
            //回到顶部方法
            top(){
-              const dom=document.querySelector('index');
 
-              this.nextTick(()=>{
-                dom.scrollTop=0;
+             const top=Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+             //console.log(top+'|'+document.documentElement.scrollTop+'|'+document.body.scrollTop);
+              this.$nextTick(()=>{
+                //dom.scrollTop=0;
+                 document.documentElement.scrollTop=0;
               })
            }
         }
