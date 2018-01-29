@@ -60,6 +60,11 @@ export default {
    [types.CHANGE_LOGIN_FLAG](state,res){
       state.loginFlag=res;
    },
+   //保存用户信息
+   [types.SAVE_LOGIN_USERINFO](state,res){
+     state.account=res.account;
+     state.password=res.password;
+   },
    //修改回弹按钮状态
    [types.CHANGE_CIRCLE_FLAG](state,res){
       state.circleFlag=res;
@@ -67,6 +72,7 @@ export default {
    //修改分享弹出层状态
    [types.CHANGE_SHARE_FLAG](state,res){
       state.shareFlag=!state.shareFlag;
-   }
+   },
+
 
 }

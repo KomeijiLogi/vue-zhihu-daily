@@ -48,7 +48,7 @@
        computed:{
          username(){
             if(this.$store.state.loginFlag){
-               return '已登录';
+               return this.$store.state.account+'|已登录';
             }else {
                return '未登录';
             }

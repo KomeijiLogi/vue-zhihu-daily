@@ -41,6 +41,9 @@ export  const CHANGE_CIRCLE_FLAG='CHANGE_CIRCLE_FLAG';
 //修改分享弹出层状态
 export  const CHANGE_SHARE_FLAG='CHANGE_SHARE_FLAG';
 
+//保存用户信息
+export const SAVE_LOGIN_USERINFO='SAVE_LOGIN_USERINFO';
+
 
 
 

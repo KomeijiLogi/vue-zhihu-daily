@@ -56,9 +56,13 @@
                //改变登录flag
                this.$store.commit('CHANGE_LOGIN_FLAG',true);
 
+               //保存用户信息状态
+              this.$store.commit('SAVE_LOGIN_USERINFO',{account:this.account,password:this.password});
+
                //暂存账号密码到localstorage中
                Util.setLocal(this.password,'password',false);
                Util.setLocal(this.account,'account',false);
+
 
                Toast(`登录成功，即将跳转`);
                //延迟2秒跳转到用户页
