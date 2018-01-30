@@ -1,7 +1,7 @@
 <template>
   <div class="comment">
-      <span>长评论</span>
-      <ul class="comment-ul" v-if="commitLongDatas.length!=0">
+      <span v-show="long_flag">长评论</span>
+      <ul class="comment-ul">
         <li v-for="j in commitLongDatas.comments" class="comment-li">
             <div class="comment-user">
                 <span>{{j.author}}</span>
@@ -20,9 +20,9 @@
           <p class="time">{{timestampToDate(j.time)}}</p>
         </li>
       </ul>
+      <span v-show="!long_flag">暂无长评论</span>
 
-
-      <span>短评论</span>
+      <span v-show="short_flag">短评论</span>
       <ul class="comment-ul">
          <li v-for="k in commitDatas.comments" class="comment-li">
             <div class="comment-user">
@@ -33,6 +33,7 @@
            <p class="time">{{timestampToDate(k.time)}}</p>
          </li>
       </ul>
+      <span v-show="!short_flag">暂无短评论</span>
       <v-footer></v-footer>
   </div>
 </template>
@@ -43,7 +44,9 @@
        data(){
           return{
              commitDatas:'',  //短评论集合
-             commitLongDatas:''  //长评论集合
+             commitLongDatas:'',  //长评论集合
+             long_flag:false,       //短评论显示flag
+             short_flag:false       //长评论显示flag
           }
        },
        components:{
@@ -56,6 +59,9 @@
             .then((res)=>{
                 console.log(res.data);
                 this.commitDatas=res.data;
+                if(this.commitDatas.comments.length!=0){
+                  this.short_flag=!this.short_flag;
+                }
             })
             .catch((err)=>{
               console.log(err);
@@ -64,6 +70,9 @@
             .then((res)=>{
                console.log(res.data);
                this.commitLongDatas=res.data;
+              if(this.commitLongDatas.comments.length!=0){
+                this.long_flag=!this.long_flag;
+              }
             })
             .catch((err)=>{
               console.log(err);
