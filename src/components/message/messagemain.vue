@@ -1,9 +1,16 @@
 <template>
     <div class="messagemain">
-       <span>通知列表</span>
+      <div>
+        <span>通知列表</span>
+      </div>
+
        <section class="notice-area">
            <div class="notice-area-true" v-if="hasNotice">
+              <ul class="notice-area-ul">
+                 <li class="notice-area-li" v-for="k in datas">
 
+                 </li>
+              </ul>
            </div>
            <div class="notice-area-false" v-else>
               <span>没有内容</span>
@@ -17,7 +24,8 @@
         //name: "messagemain"
         data(){
            return{
-              hasNotice:false   //是否有通知内容
+              hasNotice:true,   //是否有通知内容
+              datas:'',          //通知信息数组
            }
         }
     }
@@ -27,9 +35,13 @@
   @import "../../assets/fz";
   @import "../../assets/icons/iconfont";
   .messagemain{
-     span{
-        
+      div{
+         .bt();
+         .bd();
+         span{
+            .fz(font-size,36);
 
-     }
+         }
+      }
   }
 </style>
