@@ -1,6 +1,6 @@
 # vzhihu-daily
 
-> 基于vue2.x全家桶实现的知乎日报
+
 ![](https://img.shields.io/npm/v/npm.svg) 
 ![](https://img.shields.io/npm/l/express.svg)
 ![](https://img.shields.io/badge/axios-0.17.1-brightgreen.svg)
@@ -10,7 +10,7 @@
 ![](https://img.shields.io/badge/vue--router-3.0.1-orange.svg)
 ![](https://img.shields.io/badge/vuex-3.0.1-yellowgreen.svg)
 
-
+> 基于vue2.x全家桶实现的知乎日报
 
 
 >版权声明:
