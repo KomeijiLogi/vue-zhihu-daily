@@ -20,7 +20,7 @@
 </script>
 
 <style lang="less" scoped>
-@import "../../assets/fz";
+  @import "../../assets/fz";
   @import "../../assets/icons/iconfont";
   .comment-footer{
      .bt();
@@ -33,19 +33,23 @@
       box-sizing: border-box;
       background-color: white;
       padding: 3vw;
+      z-index: 9999;
       a{
 
-
+         border: 1px #81C1EF solid;
+         box-shadow: 0px 0px 10px #888888;
          i{
             .fz(font-size,40);
 
          }
          &:nth-child(1){
-            width: 25%;
-           text-align: center;
+            width: 50%;
+           text-align: left;
+
          }
          &:nth-child(2){
-            width: 75%;
+            width: 50%;
+            padding: 1vw;
          }
       }
   }

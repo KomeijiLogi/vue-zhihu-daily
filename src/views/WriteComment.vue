@@ -3,7 +3,7 @@
         <v-header class="write-comment-header">
            <h2 slot="title">写评论</h2>
         </v-header>
-       <textarea placeholder="请填写评论" rows="20" cols="50" class="write-comment-area" v-model="discuss">
+       <textarea placeholder="请填写评论..." rows="20" cols="50" class="write-comment-area" v-model="discuss">
 
        </textarea>
        <mt-button size="large" type="primary" @click="postDiscuss()">
@@ -45,6 +45,7 @@
 
      .write-comment-area{
         padding: 1vw;
+        margin: 1vw;
      }
   }
 </style>
