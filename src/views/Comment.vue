@@ -1,7 +1,7 @@
 <template>
   <div class="comment">
       <span v-show="long_flag">长评论</span>
-      <ul class="comment-ul">
+      <ul class="comment-ul" v-show="long_flag">
         <li v-for="j in commitLongDatas.comments" class="comment-li">
             <div class="comment-user">
                 <span>{{j.author}}</span>
@@ -23,7 +23,7 @@
       <span v-show="!long_flag">暂无长评论</span>
 
       <span v-show="short_flag">短评论</span>
-      <ul class="comment-ul">
+      <ul class="comment-ul" v-show="short_flag">
          <li v-for="k in commitDatas.comments" class="comment-li">
             <div class="comment-user">
                <span>{{k.author}}</span>
@@ -101,6 +101,9 @@
 @import "../assets/fz";
 @import "../assets/icons/iconfont";
   .comment{
+     display: flex;
+     flex-direction: column;
+
      .comment-ul{
        z-index: 1;
        list-style-type: none;
