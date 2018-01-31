@@ -44,6 +44,11 @@
       }
    </code>  
 </pre>
+#####  在正式环境中，应该考虑为客户端访问服务器的api，然后服务器通过代理，讲要访问的api转换为外网接口api，从而解决数据获取的问题，或者
+#####  考虑CROS方案来实现跨域获取数据
+
+
+
 
 #####  2.知乎Api的开发文档参考的是izzyleung对于知乎api的分析，感谢izzyleung提供了api详情以让我专注于移动端开发<br/>
 #####  这里是[izzyleung关于知乎Api的分析](https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90)
