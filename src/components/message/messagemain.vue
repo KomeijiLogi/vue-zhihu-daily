@@ -2,6 +2,7 @@
     <div class="messagemain">
       <div>
         <span>通知列表</span>
+        <mt-badge size="normal" type="primary">10</mt-badge>
       </div>
 
        <section class="notice-area">
@@ -39,7 +40,10 @@
          .bt();
          .bd();
          span{
-            .fz(font-size,36);
+            &:nth-child(1){
+              .fz(font-size,36);
+            }
+
 
          }
       }

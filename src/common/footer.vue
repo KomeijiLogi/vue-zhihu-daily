@@ -10,8 +10,10 @@
             收藏
          </mt-tab-item>
          <mt-tab-item id="消息页">
+
              <i slot="icon" class="iconfont icon-email"></i>
              消息
+
          </mt-tab-item>
          <mt-tab-item id="用户页">
             <i slot="icon" class="iconfont icon-set"></i>
@@ -60,4 +62,5 @@
 <style lang="less" scoped>
   @import "../assets/icons/iconfont";
   @import "../assets/fz";
+
 </style>
