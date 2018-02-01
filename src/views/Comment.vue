@@ -20,7 +20,7 @@
           <p class="time">{{timestampToDate(j.time)}}</p>
         </li>
       </ul>
-      <span v-show="!long_flag">暂无长评论</span>
+
 
       <span v-show="short_flag">短评论</span>
       <ul class="comment-ul" v-show="short_flag">
@@ -33,7 +33,7 @@
            <p class="time">{{timestampToDate(k.time)}}</p>
          </li>
       </ul>
-      <span v-show="!short_flag">暂无短评论</span>
+      <span v-show="!short_flag&&!long_flag">暂无评论</span>
       <v-footer></v-footer>
   </div>
 </template>
