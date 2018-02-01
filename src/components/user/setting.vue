@@ -27,7 +27,7 @@
             <span>帮助</span><i class="iconfont icon-more"></i>
           </p>
         </router-link>
-        <router-link :to="{name:''}">
+        <router-link :to="{name:''}" @click.native="showVersion()">
           <div>
             <span class="iconfont icon-information"></span>
           </div>
@@ -44,6 +44,7 @@
 
 <script>
     import {Toast} from 'mint-ui'
+    import {MessageBox} from 'mint-ui'
     import Util from '@/util/common.js'
     export default {
 
@@ -63,7 +64,11 @@
                  path:'/login'
               })
             },2000);
-          }
+          },
+         showVersion(){
+            //模拟显示版本信息
+            MessageBox('版本信息','当前版本:1.0.0');
+         }
        }
     }
 </script>

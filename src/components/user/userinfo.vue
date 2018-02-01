@@ -7,7 +7,7 @@
              <span>用户名</span>
         </header>
         <section class="my-func">
-          <router-link :to="{name:''}">
+          <router-link :to="{name:'收藏页'}">
             <div>
               <span class="iconfont icon-favorite"></span>
             </div>
