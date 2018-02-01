@@ -7,8 +7,8 @@
        <section class="notice-area">
            <div class="notice-area-true" v-if="hasNotice">
               <ul class="notice-area-ul">
-                 <li class="notice-area-li" v-for="k in datas">
-
+                 <li class="notice-area-li" v-for="n in 10">
+                    通知内容通知内容通知内容通知内容通知内容
                  </li>
               </ul>
            </div>
@@ -25,7 +25,7 @@
         data(){
            return{
               hasNotice:true,   //是否有通知内容
-              datas:'',          //通知信息数组
+              //datas:'',          //通知信息数组
            }
         }
     }
@@ -43,5 +43,22 @@
 
          }
       }
+     .notice-area{
+       .notice-area-true{
+         .notice-area-ul{
+            list-style-type: none;
+            padding: 0;
+            .notice-area-li{
+               border: 1px #7f7f7f dashed;
+               padding: 2vw;
+               height: 20vw;
+               text-align: left;
+               margin: 1vw;
+            }
+            margin-bottom: 20vw;
+
+         }
+       }
+     }
   }
 </style>
