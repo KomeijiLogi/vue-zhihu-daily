@@ -18,6 +18,7 @@ import ThemeDetail from '@/views/ThemeDetail'
 import Editor from '@/views/Editor'
 import EditorList from '@/views/EditorList'
 */
+
 //路由懒加载实现
 const NewsDetail =r=>require.ensure([],()=>r(require('@/views/NewsDetail')))
 const Comment=r=>require.ensure([],()=>r(require('@/views/Comment')))
