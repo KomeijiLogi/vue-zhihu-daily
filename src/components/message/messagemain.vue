@@ -37,12 +37,15 @@
   @import "../../assets/fz";
   @import "../../assets/icons/iconfont";
   .messagemain{
+      
       div{
-         .bt();
+
          .bd();
+         margin-top: 5vw;
          span{
             &:nth-child(1){
               .fz(font-size,36);
+
             }
 
 

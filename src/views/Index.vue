@@ -3,7 +3,7 @@
      <v-header ></v-header>
      <v-swiper></v-swiper>
      <v-section ></v-section>
-     <v-backscroll :scroller="scroller" :flag="circleFlag"  @click.native="top()">
+     <v-backscroll :scroller="scroller" :flag="circleFlag"  @click.native="onScroll()">
      </v-backscroll>
      <v-footer></v-footer>
   </div>
@@ -39,7 +39,7 @@
         },
         methods:{
            //回到顶部方法
-           top(){
+          onScroll(){
 
              const top=Math.max(document.documentElement.scrollTop,document.body.scrollTop);
              //console.log(top+'|'+document.documentElement.scrollTop+'|'+document.body.scrollTop);
