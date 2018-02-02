@@ -5,6 +5,8 @@ import HelloWorld from '@/components/HelloWorld'
 Vue.use(Router)
 
 import Index from '@/views/Index'
+
+/*
 import NewsDetail from '@/views/NewsDetail'
 import Comment from '@/views/Comment'
 import Collect from '@/views/Collect'
@@ -15,6 +17,19 @@ import Message from '@/views/Message'
 import ThemeDetail from '@/views/ThemeDetail'
 import Editor from '@/views/Editor'
 import EditorList from '@/views/EditorList'
+*/
+//路由懒加载实现
+const NewsDetail =r=>require.ensure([],()=>r(require('@/views/NewsDetail')))
+const Comment=r=>require.ensure([],()=>r(require('@/views/Comment')))
+const Collect=r=>require.ensure([],()=>r(require('@/views/Collect')))
+const WriteComment=r=>require.ensure([],()=>r(require('@/views/WriteComment')))
+const Login=r=>require.ensure([],()=>r(require('@/views/Login')))
+const User=r=>require.ensure([],()=>r(require('@/views/User')))
+const Message=r=>require.ensure([],()=>r(require('@/views/Message')))
+const ThemeDetail=r=>require.ensure([],()=>r(require('@/views/ThemeDetail')))
+const Editor=r=>require.ensure([],()=>r(require('@/views/Editor')))
+const EditorList=r=>require.ensure([],()=>r(require('@/views/EditorList')))
+
 
 export default new Router({
   routes: [
