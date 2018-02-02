@@ -61,7 +61,7 @@
                margin: 2vw;
                border-radius: 1.5vw;
                .fz(font-size,28);
-               box-shadow: 1px 1px 10px #888888;    
+               box-shadow: 1px 1px 10px #888888;
                span{
                   padding: 1vw;
 

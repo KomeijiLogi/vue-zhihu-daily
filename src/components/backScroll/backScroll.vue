@@ -40,7 +40,7 @@
      .fz(right,60);
      .fz(bottom,120);
      border-radius: 75%;
-     background-color: white;
+     background-color: whitesmoke;
      opacity: 1;
     //翻转180
     /*transform: rotate(180deg);*/
