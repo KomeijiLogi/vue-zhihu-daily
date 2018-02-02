@@ -10,6 +10,7 @@ const api=axios.create({
      'Access-Control-Allow-Origin':'http://news-at.zhihu.com',
      'Access-Control-Allow-Credentials':true,     //是否允许发送cookies,但是需要服务器端和ajax中设置,现在这么配置依然不会处理cookies
    }
+
 })
 
 

@@ -9,7 +9,8 @@
            <div class="notice-area-true" v-if="hasNotice">
               <ul class="notice-area-ul">
                  <li class="notice-area-li" v-for="n in 10">
-                    通知内容通知内容通知内容通知内容通知内容
+                    <p>通知内容通知内容通知内容通知内容通知内容</p>
+                    <span>2018/02/02 09:46</span>
                  </li>
               </ul>
            </div>
@@ -58,6 +59,12 @@
                height: 20vw;
                text-align: left;
                margin: 1vw;
+               border-radius: 1.5vw;
+               .fz(font-size,28);
+               span{
+                  padding: 1vw;
+
+               }
             }
             margin-bottom: 20vw;
 
